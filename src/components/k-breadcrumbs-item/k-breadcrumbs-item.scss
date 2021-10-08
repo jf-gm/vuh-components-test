@@ -1,0 +1,32 @@
+:host(.KBreadcrumbsItem) {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.KBreadcrumbsItem-link {
+  color: rgba($color: #000000, $alpha: 0.7);
+  font-size: 14px;
+
+  &.KBreadcrumbsItem-current {
+    font-weight: $semi-bold;
+    color: color(primary-color);
+  }
+
+  &.KBreadcrumbsItem-normal {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+::slotted(a) {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+}
+
+.KBreadcrumbsItem-icon {
+  font-size: 24px;
+  color: color(primary-100);
+}
