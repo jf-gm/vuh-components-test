@@ -144,8 +144,64 @@ export namespace Components {
         "name": string;
         "value": string;
     }
+    interface KElevation {
+        "radius"?: string;
+    }
     interface KGrid {
         "fluid"?: boolean;
+    }
+    interface KIcon {
+        "name": | 'alert-circle'
+    | 'assistant'
+    | 'attachment'
+    | 'bookmark-border'
+    | 'bookmark'
+    | 'cached'
+    | 'check-circle'
+    | 'close'
+    | 'cloud-upload'
+    | 'colorize'
+    | 'delete'
+    | 'done'
+    | 'drag-indicator'
+    | 'edit'
+    | 'event'
+    | 'file-copy'
+    | 'finish-1'
+    | 'finish-2'
+    | 'finish-3'
+    | 'flip-camera-ios'
+    | 'school'
+    | 'highlight-off'
+    | 'info'
+    | 'insert-drive-file'
+    | 'keyboard-arrow-down'
+    | 'keyboard-arrow-left'
+    | 'keyboard-arrow-right'
+    | 'keyboard-arrow-up'
+    | 'menu'
+    | 'network-wired'
+    | 'notifications-active'
+    | 'notifications'
+    | 'person'
+    | 'photo-camera'
+    | 'playlist-add-check'
+    | 'question-answer'
+    | 'remove-red-eye'
+    | 'ribbon'
+    | 'search'
+    | 'settings'
+    | 'supervised-user-circle'
+    | 'swap-vert'
+    | 'swap-vert-down'
+    | 'swap-vert-up'
+    | 'tune'
+    | 'view-week'
+    | 'visibility-off'
+    | 'add-circle'
+    | 'bookmarks'
+    | 'dashboard';
+        "size"?: 'small' | 'medium' | 'large' | 'extra-large';
     }
     interface KImg {
         "alt"?: string;
@@ -154,8 +210,74 @@ export namespace Components {
         "src": string;
         "width"?: number;
     }
+    interface KInput {
+        "disabled"?: boolean;
+        "helperText"?: string;
+        "label": string;
+        "maxLength"?: number;
+        "minLength"?: number;
+        "name"?: string;
+        "type": 'text' | 'password' | 'email' | 'tel' | 'url' | 'number';
+        "validationState"?: '' | 'success' | 'error';
+        "value"?: string;
+    }
+    interface KLabel {
+    }
+    interface KListGroup {
+    }
+    interface KListItem {
+    }
+    interface KMenu {
+        "disableDrawer": boolean;
+        "hideDrawerLg": boolean;
+        "hideDrawerMd": boolean;
+        "hideDrawerSm": boolean;
+        "hideDrawerXl": boolean;
+        "hideDrawerXs": boolean;
+        "menuKey": string;
+    }
+    interface KMenuContent {
+    }
+    interface KMenuNav {
+    }
+    interface KModal {
+        "hideCloseButton": boolean;
+        "show": boolean;
+    }
+    interface KNotification {
+        "notificationCount": number;
+    }
+    interface KNotificationGroup {
+    }
+    interface KNotificationItem {
+        "alertColor": string;
+        "isRead"?: boolean;
+        "label": string;
+        "time"?: string;
+    }
+    interface KPaginator {
+        "currentPage"?: number;
+        "totalPages": number;
+    }
+    interface KProgressBar {
+        "value": number;
+    }
+    interface KRadioButton {
+        "checked": boolean;
+        "disabled"?: boolean;
+        "name": string;
+        "value": string;
+    }
+    interface KRadioButtonGroup {
+    }
     interface KRow {
         "spacing"?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    }
+    interface KTab {
+    }
+    interface KTabItem {
+        "current": boolean;
+        "disabled": boolean;
     }
 }
 declare global {
@@ -303,11 +425,23 @@ declare global {
         prototype: HTMLKDropdownItemElement;
         new (): HTMLKDropdownItemElement;
     };
+    interface HTMLKElevationElement extends Components.KElevation, HTMLStencilElement {
+    }
+    var HTMLKElevationElement: {
+        prototype: HTMLKElevationElement;
+        new (): HTMLKElevationElement;
+    };
     interface HTMLKGridElement extends Components.KGrid, HTMLStencilElement {
     }
     var HTMLKGridElement: {
         prototype: HTMLKGridElement;
         new (): HTMLKGridElement;
+    };
+    interface HTMLKIconElement extends Components.KIcon, HTMLStencilElement {
+    }
+    var HTMLKIconElement: {
+        prototype: HTMLKIconElement;
+        new (): HTMLKIconElement;
     };
     interface HTMLKImgElement extends Components.KImg, HTMLStencilElement {
     }
@@ -315,11 +449,113 @@ declare global {
         prototype: HTMLKImgElement;
         new (): HTMLKImgElement;
     };
+    interface HTMLKInputElement extends Components.KInput, HTMLStencilElement {
+    }
+    var HTMLKInputElement: {
+        prototype: HTMLKInputElement;
+        new (): HTMLKInputElement;
+    };
+    interface HTMLKLabelElement extends Components.KLabel, HTMLStencilElement {
+    }
+    var HTMLKLabelElement: {
+        prototype: HTMLKLabelElement;
+        new (): HTMLKLabelElement;
+    };
+    interface HTMLKListGroupElement extends Components.KListGroup, HTMLStencilElement {
+    }
+    var HTMLKListGroupElement: {
+        prototype: HTMLKListGroupElement;
+        new (): HTMLKListGroupElement;
+    };
+    interface HTMLKListItemElement extends Components.KListItem, HTMLStencilElement {
+    }
+    var HTMLKListItemElement: {
+        prototype: HTMLKListItemElement;
+        new (): HTMLKListItemElement;
+    };
+    interface HTMLKMenuElement extends Components.KMenu, HTMLStencilElement {
+    }
+    var HTMLKMenuElement: {
+        prototype: HTMLKMenuElement;
+        new (): HTMLKMenuElement;
+    };
+    interface HTMLKMenuContentElement extends Components.KMenuContent, HTMLStencilElement {
+    }
+    var HTMLKMenuContentElement: {
+        prototype: HTMLKMenuContentElement;
+        new (): HTMLKMenuContentElement;
+    };
+    interface HTMLKMenuNavElement extends Components.KMenuNav, HTMLStencilElement {
+    }
+    var HTMLKMenuNavElement: {
+        prototype: HTMLKMenuNavElement;
+        new (): HTMLKMenuNavElement;
+    };
+    interface HTMLKModalElement extends Components.KModal, HTMLStencilElement {
+    }
+    var HTMLKModalElement: {
+        prototype: HTMLKModalElement;
+        new (): HTMLKModalElement;
+    };
+    interface HTMLKNotificationElement extends Components.KNotification, HTMLStencilElement {
+    }
+    var HTMLKNotificationElement: {
+        prototype: HTMLKNotificationElement;
+        new (): HTMLKNotificationElement;
+    };
+    interface HTMLKNotificationGroupElement extends Components.KNotificationGroup, HTMLStencilElement {
+    }
+    var HTMLKNotificationGroupElement: {
+        prototype: HTMLKNotificationGroupElement;
+        new (): HTMLKNotificationGroupElement;
+    };
+    interface HTMLKNotificationItemElement extends Components.KNotificationItem, HTMLStencilElement {
+    }
+    var HTMLKNotificationItemElement: {
+        prototype: HTMLKNotificationItemElement;
+        new (): HTMLKNotificationItemElement;
+    };
+    interface HTMLKPaginatorElement extends Components.KPaginator, HTMLStencilElement {
+    }
+    var HTMLKPaginatorElement: {
+        prototype: HTMLKPaginatorElement;
+        new (): HTMLKPaginatorElement;
+    };
+    interface HTMLKProgressBarElement extends Components.KProgressBar, HTMLStencilElement {
+    }
+    var HTMLKProgressBarElement: {
+        prototype: HTMLKProgressBarElement;
+        new (): HTMLKProgressBarElement;
+    };
+    interface HTMLKRadioButtonElement extends Components.KRadioButton, HTMLStencilElement {
+    }
+    var HTMLKRadioButtonElement: {
+        prototype: HTMLKRadioButtonElement;
+        new (): HTMLKRadioButtonElement;
+    };
+    interface HTMLKRadioButtonGroupElement extends Components.KRadioButtonGroup, HTMLStencilElement {
+    }
+    var HTMLKRadioButtonGroupElement: {
+        prototype: HTMLKRadioButtonGroupElement;
+        new (): HTMLKRadioButtonGroupElement;
+    };
     interface HTMLKRowElement extends Components.KRow, HTMLStencilElement {
     }
     var HTMLKRowElement: {
         prototype: HTMLKRowElement;
         new (): HTMLKRowElement;
+    };
+    interface HTMLKTabElement extends Components.KTab, HTMLStencilElement {
+    }
+    var HTMLKTabElement: {
+        prototype: HTMLKTabElement;
+        new (): HTMLKTabElement;
+    };
+    interface HTMLKTabItemElement extends Components.KTabItem, HTMLStencilElement {
+    }
+    var HTMLKTabItemElement: {
+        prototype: HTMLKTabItemElement;
+        new (): HTMLKTabItemElement;
     };
     interface HTMLElementTagNameMap {
         "ihg-button": HTMLIhgButtonElement;
@@ -346,9 +582,28 @@ declare global {
         "k-divider": HTMLKDividerElement;
         "k-dropdown": HTMLKDropdownElement;
         "k-dropdown-item": HTMLKDropdownItemElement;
+        "k-elevation": HTMLKElevationElement;
         "k-grid": HTMLKGridElement;
+        "k-icon": HTMLKIconElement;
         "k-img": HTMLKImgElement;
+        "k-input": HTMLKInputElement;
+        "k-label": HTMLKLabelElement;
+        "k-list-group": HTMLKListGroupElement;
+        "k-list-item": HTMLKListItemElement;
+        "k-menu": HTMLKMenuElement;
+        "k-menu-content": HTMLKMenuContentElement;
+        "k-menu-nav": HTMLKMenuNavElement;
+        "k-modal": HTMLKModalElement;
+        "k-notification": HTMLKNotificationElement;
+        "k-notification-group": HTMLKNotificationGroupElement;
+        "k-notification-item": HTMLKNotificationItemElement;
+        "k-paginator": HTMLKPaginatorElement;
+        "k-progress-bar": HTMLKProgressBarElement;
+        "k-radio-button": HTMLKRadioButtonElement;
+        "k-radio-button-group": HTMLKRadioButtonGroupElement;
         "k-row": HTMLKRowElement;
+        "k-tab": HTMLKTabElement;
+        "k-tab-item": HTMLKTabItemElement;
     }
 }
 declare namespace LocalJSX {
@@ -497,8 +752,64 @@ declare namespace LocalJSX {
   }>) => void;
         "value"?: string;
     }
+    interface KElevation {
+        "radius"?: string;
+    }
     interface KGrid {
         "fluid"?: boolean;
+    }
+    interface KIcon {
+        "name"?: | 'alert-circle'
+    | 'assistant'
+    | 'attachment'
+    | 'bookmark-border'
+    | 'bookmark'
+    | 'cached'
+    | 'check-circle'
+    | 'close'
+    | 'cloud-upload'
+    | 'colorize'
+    | 'delete'
+    | 'done'
+    | 'drag-indicator'
+    | 'edit'
+    | 'event'
+    | 'file-copy'
+    | 'finish-1'
+    | 'finish-2'
+    | 'finish-3'
+    | 'flip-camera-ios'
+    | 'school'
+    | 'highlight-off'
+    | 'info'
+    | 'insert-drive-file'
+    | 'keyboard-arrow-down'
+    | 'keyboard-arrow-left'
+    | 'keyboard-arrow-right'
+    | 'keyboard-arrow-up'
+    | 'menu'
+    | 'network-wired'
+    | 'notifications-active'
+    | 'notifications'
+    | 'person'
+    | 'photo-camera'
+    | 'playlist-add-check'
+    | 'question-answer'
+    | 'remove-red-eye'
+    | 'ribbon'
+    | 'search'
+    | 'settings'
+    | 'supervised-user-circle'
+    | 'swap-vert'
+    | 'swap-vert-down'
+    | 'swap-vert-up'
+    | 'tune'
+    | 'view-week'
+    | 'visibility-off'
+    | 'add-circle'
+    | 'bookmarks'
+    | 'dashboard';
+        "size"?: 'small' | 'medium' | 'large' | 'extra-large';
     }
     interface KImg {
         "alt"?: string;
@@ -507,8 +818,85 @@ declare namespace LocalJSX {
         "src"?: string;
         "width"?: number;
     }
+    interface KInput {
+        "disabled"?: boolean;
+        "helperText"?: string;
+        "label"?: string;
+        "maxLength"?: number;
+        "minLength"?: number;
+        "name"?: string;
+        "onValueChange"?: (event: CustomEvent<any>) => void;
+        "type"?: 'text' | 'password' | 'email' | 'tel' | 'url' | 'number';
+        "validationState"?: '' | 'success' | 'error';
+        "value"?: string;
+    }
+    interface KLabel {
+    }
+    interface KListGroup {
+    }
+    interface KListItem {
+    }
+    interface KMenu {
+        "disableDrawer"?: boolean;
+        "hideDrawerLg"?: boolean;
+        "hideDrawerMd"?: boolean;
+        "hideDrawerSm"?: boolean;
+        "hideDrawerXl"?: boolean;
+        "hideDrawerXs"?: boolean;
+        "menuKey"?: string;
+        "onToggleMenu"?: (event: CustomEvent<{
+    id: string;
+    hideDrawerXs: boolean;
+    hideDrawerSm: boolean;
+    hideDrawerMd: boolean;
+    hideDrawerLg: boolean;
+    hideDrawerXl: boolean;
+  }>) => void;
+    }
+    interface KMenuContent {
+    }
+    interface KMenuNav {
+    }
+    interface KModal {
+        "hideCloseButton"?: boolean;
+        "show"?: boolean;
+    }
+    interface KNotification {
+        "notificationCount"?: number;
+    }
+    interface KNotificationGroup {
+    }
+    interface KNotificationItem {
+        "alertColor"?: string;
+        "isRead"?: boolean;
+        "label"?: string;
+        "time"?: string;
+    }
+    interface KPaginator {
+        "currentPage"?: number;
+        "totalPages"?: number;
+    }
+    interface KProgressBar {
+        "value"?: number;
+    }
+    interface KRadioButton {
+        "checked"?: boolean;
+        "disabled"?: boolean;
+        "name"?: string;
+        "onValueChanged"?: (event: CustomEvent<{ value: any; id: String }>) => void;
+        "value"?: string;
+    }
+    interface KRadioButtonGroup {
+    }
     interface KRow {
         "spacing"?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    }
+    interface KTab {
+    }
+    interface KTabItem {
+        "current"?: boolean;
+        "disabled"?: boolean;
+        "onValueChanged"?: (event: CustomEvent<{ value: boolean; id: String }>) => void;
     }
     interface IntrinsicElements {
         "ihg-button": IhgButton;
@@ -535,9 +923,28 @@ declare namespace LocalJSX {
         "k-divider": KDivider;
         "k-dropdown": KDropdown;
         "k-dropdown-item": KDropdownItem;
+        "k-elevation": KElevation;
         "k-grid": KGrid;
+        "k-icon": KIcon;
         "k-img": KImg;
+        "k-input": KInput;
+        "k-label": KLabel;
+        "k-list-group": KListGroup;
+        "k-list-item": KListItem;
+        "k-menu": KMenu;
+        "k-menu-content": KMenuContent;
+        "k-menu-nav": KMenuNav;
+        "k-modal": KModal;
+        "k-notification": KNotification;
+        "k-notification-group": KNotificationGroup;
+        "k-notification-item": KNotificationItem;
+        "k-paginator": KPaginator;
+        "k-progress-bar": KProgressBar;
+        "k-radio-button": KRadioButton;
+        "k-radio-button-group": KRadioButtonGroup;
         "k-row": KRow;
+        "k-tab": KTab;
+        "k-tab-item": KTabItem;
     }
 }
 export { LocalJSX as JSX };
@@ -568,9 +975,28 @@ declare module "@stencil/core" {
             "k-divider": LocalJSX.KDivider & JSXBase.HTMLAttributes<HTMLKDividerElement>;
             "k-dropdown": LocalJSX.KDropdown & JSXBase.HTMLAttributes<HTMLKDropdownElement>;
             "k-dropdown-item": LocalJSX.KDropdownItem & JSXBase.HTMLAttributes<HTMLKDropdownItemElement>;
+            "k-elevation": LocalJSX.KElevation & JSXBase.HTMLAttributes<HTMLKElevationElement>;
             "k-grid": LocalJSX.KGrid & JSXBase.HTMLAttributes<HTMLKGridElement>;
+            "k-icon": LocalJSX.KIcon & JSXBase.HTMLAttributes<HTMLKIconElement>;
             "k-img": LocalJSX.KImg & JSXBase.HTMLAttributes<HTMLKImgElement>;
+            "k-input": LocalJSX.KInput & JSXBase.HTMLAttributes<HTMLKInputElement>;
+            "k-label": LocalJSX.KLabel & JSXBase.HTMLAttributes<HTMLKLabelElement>;
+            "k-list-group": LocalJSX.KListGroup & JSXBase.HTMLAttributes<HTMLKListGroupElement>;
+            "k-list-item": LocalJSX.KListItem & JSXBase.HTMLAttributes<HTMLKListItemElement>;
+            "k-menu": LocalJSX.KMenu & JSXBase.HTMLAttributes<HTMLKMenuElement>;
+            "k-menu-content": LocalJSX.KMenuContent & JSXBase.HTMLAttributes<HTMLKMenuContentElement>;
+            "k-menu-nav": LocalJSX.KMenuNav & JSXBase.HTMLAttributes<HTMLKMenuNavElement>;
+            "k-modal": LocalJSX.KModal & JSXBase.HTMLAttributes<HTMLKModalElement>;
+            "k-notification": LocalJSX.KNotification & JSXBase.HTMLAttributes<HTMLKNotificationElement>;
+            "k-notification-group": LocalJSX.KNotificationGroup & JSXBase.HTMLAttributes<HTMLKNotificationGroupElement>;
+            "k-notification-item": LocalJSX.KNotificationItem & JSXBase.HTMLAttributes<HTMLKNotificationItemElement>;
+            "k-paginator": LocalJSX.KPaginator & JSXBase.HTMLAttributes<HTMLKPaginatorElement>;
+            "k-progress-bar": LocalJSX.KProgressBar & JSXBase.HTMLAttributes<HTMLKProgressBarElement>;
+            "k-radio-button": LocalJSX.KRadioButton & JSXBase.HTMLAttributes<HTMLKRadioButtonElement>;
+            "k-radio-button-group": LocalJSX.KRadioButtonGroup & JSXBase.HTMLAttributes<HTMLKRadioButtonGroupElement>;
             "k-row": LocalJSX.KRow & JSXBase.HTMLAttributes<HTMLKRowElement>;
+            "k-tab": LocalJSX.KTab & JSXBase.HTMLAttributes<HTMLKTabElement>;
+            "k-tab-item": LocalJSX.KTabItem & JSXBase.HTMLAttributes<HTMLKTabItemElement>;
         }
     }
 }

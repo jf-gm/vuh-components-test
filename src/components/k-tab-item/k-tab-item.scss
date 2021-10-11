@@ -1,0 +1,40 @@
+:host {
+  width: 100%;
+}
+
+.KTabItem {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border: none;
+  background-color: white;
+  color: $gray-400;
+  font-weight: $regular;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  outline: none;
+  border-bottom: 2px solid $gray-100;
+
+  &:hover {
+    background-color: rgba($color: color(primary-100-rgb), $alpha: 0.1);
+  }
+
+  &:disabled {
+    background-color: rgba($color: $gray-100, $alpha: 0.3);
+    cursor: not-allowed;
+  }
+
+  &:disabled:hover {
+    background-color: rgba($color: $gray-100, $alpha: 0.3);
+  }
+
+  &.is-active {
+    color: color(primary-800);
+  }
+
+  & > ::slotted(:first-child) {
+    display: block;
+    padding: 8px 0;
+  }
+}

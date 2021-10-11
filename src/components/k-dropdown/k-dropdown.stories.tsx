@@ -3,7 +3,7 @@ import { KDropdown, KDropdownItem } from '../../../component-library-react/src/c
 
 export default {
   title: 'Components/Dropdown',
-  component: 'k-dropdown-item'
+  component: 'k-dropdown'
 };
 
 const Template = (props) => (

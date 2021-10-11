@@ -1,0 +1,16 @@
+:host {
+  display: inline-block;
+
+  & > .KIcon--small {
+    font-size: 16px;
+  }
+  & > .KIcon--medium {
+    font-size: 24px;
+  }
+  & > .KIcon--large {
+    font-size: 32px;
+  }
+  & > .KIcon--extra-large {
+    font-size: 48px;
+  }
+}

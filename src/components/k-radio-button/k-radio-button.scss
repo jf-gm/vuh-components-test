@@ -1,0 +1,98 @@
+:host {
+  .KRadioButton {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+    &:hover,
+    &:focus {
+      .KRadioButton-checkmark {
+        border-color: color(primary-color);
+      }
+
+      .KRadioButton-label {
+        color: $gray-300;
+      }
+    }
+
+    .KRadioButton-checkmark {
+      position: absolute;
+      background-color: white;
+      border: 0.125em solid $gray-200;
+      height: 1em;
+      width: 1em;
+      left: 0;
+      top: 0;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .KRadioButton-dot {
+        position: absolute;
+        border-radius: 50%;
+        background-color: white;
+        height: 0.5em;
+        width: 0.5em;
+      }
+    }
+
+    .KRadioButton-input {
+      opacity: 0;
+      &:checked {
+        & ~ .KRadioButton-checkmark {
+          .KRadioButton-dot {
+            background-color: color(primary-color);
+          }
+        }
+        & ~ .KRadioButton-label {
+          color: $gray-300;
+        }
+      }
+
+      &:disabled {
+        & ~ .KRadioButton-checkmark {
+          background-color: $gray-50;
+          border-color: $gray-100;
+
+          .KRadioButton-dot {
+            background-color: $gray-50;
+          }
+        }
+        & ~ .KRadioButton-label {
+          color: $gray-100;
+        }
+      }
+
+      &:disabled:checked {
+        & ~ .KRadioButton-checkmark {
+          background-color: $gray-50;
+          border-color: $gray-100;
+
+          .KRadioButton-dot {
+            background-color: $gray-200;
+          }
+        }
+
+        & ~ .KRadioButton-label {
+          color: $gray-100;
+        }
+      }
+    }
+
+    .KRadioButton-label {
+      margin-left: 8px;
+      color: $gray-200;
+    }
+  }
+
+  .KRadioButton-disabled {
+    cursor: not-allowed;
+  }
+}
