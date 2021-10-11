@@ -24,12 +24,138 @@ export namespace Components {
     interface KBreadcrumbsItem {
         "current": boolean;
     }
+    interface KButton {
+        "color"?: 'primary' | 'secondary' | 'terciary';
+        "disabled"?: boolean;
+        "elevation"?: boolean;
+        "shape"?: 'full' | 'round' | 'smooth';
+        "size"?: 'large' | 'medium' | 'small';
+    }
+    interface KCard {
+    }
+    interface KCarousel {
+        "showDots": boolean;
+        "steps": number;
+        "transitionDuration": number;
+    }
+    interface KCarouselItem {
+    }
+    interface KCheckbox {
+        "checked"?: boolean;
+        "disabled"?: boolean;
+        "value"?: string;
+    }
+    interface KCollapseItem {
+        "disabled": boolean;
+    }
+    interface KCollapseList {
+    }
+    interface KCollapseMenu {
+        "position": 'right' | 'left';
+    }
+    interface KCollapseParent {
+    }
+    interface KColumn {
+        "fluid"?: boolean;
+        "size"?: | '1'
+    | '2'
+    | '3'
+    | '4'
+    | '5'
+    | '6'
+    | '7'
+    | '8'
+    | '9'
+    | '10'
+    | '11'
+    | '12';
+        "sizelg"?: | '1'
+    | '2'
+    | '3'
+    | '4'
+    | '5'
+    | '6'
+    | '7'
+    | '8'
+    | '9'
+    | '10'
+    | '11'
+    | '12';
+        "sizemd"?: | '1'
+    | '2'
+    | '3'
+    | '4'
+    | '5'
+    | '6'
+    | '7'
+    | '8'
+    | '9'
+    | '10'
+    | '11'
+    | '12';
+        "sizesm"?: | '1'
+    | '2'
+    | '3'
+    | '4'
+    | '5'
+    | '6'
+    | '7'
+    | '8'
+    | '9'
+    | '10'
+    | '11'
+    | '12';
+        "sizexl"?: | '1'
+    | '2'
+    | '3'
+    | '4'
+    | '5'
+    | '6'
+    | '7'
+    | '8'
+    | '9'
+    | '10'
+    | '11'
+    | '12';
+    }
+    interface KDialog {
+    }
+    interface KDialogActions {
+    }
+    interface KDialogBody {
+    }
+    interface KDialogContent {
+    }
+    interface KDialogHeader {
+    }
+    interface KDivider {
+    }
+    interface KDropdown {
+        "color": 'primary' | 'secondary' | 'terciary';
+        "disabled": boolean;
+        "helperText"?: string;
+        "label": string;
+        "validationState"?: '' | 'success' | 'error';
+        "variant"?: 'button' | 'input' | 'table';
+    }
+    interface KDropdownItem {
+        "checked": boolean;
+        "disabled"?: boolean;
+        "name": string;
+        "value": string;
+    }
+    interface KGrid {
+        "fluid"?: boolean;
+    }
     interface KImg {
         "alt"?: string;
         "fit"?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
         "height"?: number;
         "src": string;
         "width"?: number;
+    }
+    interface KRow {
+        "spacing"?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     }
 }
 declare global {
@@ -69,11 +195,131 @@ declare global {
         prototype: HTMLKBreadcrumbsItemElement;
         new (): HTMLKBreadcrumbsItemElement;
     };
+    interface HTMLKButtonElement extends Components.KButton, HTMLStencilElement {
+    }
+    var HTMLKButtonElement: {
+        prototype: HTMLKButtonElement;
+        new (): HTMLKButtonElement;
+    };
+    interface HTMLKCardElement extends Components.KCard, HTMLStencilElement {
+    }
+    var HTMLKCardElement: {
+        prototype: HTMLKCardElement;
+        new (): HTMLKCardElement;
+    };
+    interface HTMLKCarouselElement extends Components.KCarousel, HTMLStencilElement {
+    }
+    var HTMLKCarouselElement: {
+        prototype: HTMLKCarouselElement;
+        new (): HTMLKCarouselElement;
+    };
+    interface HTMLKCarouselItemElement extends Components.KCarouselItem, HTMLStencilElement {
+    }
+    var HTMLKCarouselItemElement: {
+        prototype: HTMLKCarouselItemElement;
+        new (): HTMLKCarouselItemElement;
+    };
+    interface HTMLKCheckboxElement extends Components.KCheckbox, HTMLStencilElement {
+    }
+    var HTMLKCheckboxElement: {
+        prototype: HTMLKCheckboxElement;
+        new (): HTMLKCheckboxElement;
+    };
+    interface HTMLKCollapseItemElement extends Components.KCollapseItem, HTMLStencilElement {
+    }
+    var HTMLKCollapseItemElement: {
+        prototype: HTMLKCollapseItemElement;
+        new (): HTMLKCollapseItemElement;
+    };
+    interface HTMLKCollapseListElement extends Components.KCollapseList, HTMLStencilElement {
+    }
+    var HTMLKCollapseListElement: {
+        prototype: HTMLKCollapseListElement;
+        new (): HTMLKCollapseListElement;
+    };
+    interface HTMLKCollapseMenuElement extends Components.KCollapseMenu, HTMLStencilElement {
+    }
+    var HTMLKCollapseMenuElement: {
+        prototype: HTMLKCollapseMenuElement;
+        new (): HTMLKCollapseMenuElement;
+    };
+    interface HTMLKCollapseParentElement extends Components.KCollapseParent, HTMLStencilElement {
+    }
+    var HTMLKCollapseParentElement: {
+        prototype: HTMLKCollapseParentElement;
+        new (): HTMLKCollapseParentElement;
+    };
+    interface HTMLKColumnElement extends Components.KColumn, HTMLStencilElement {
+    }
+    var HTMLKColumnElement: {
+        prototype: HTMLKColumnElement;
+        new (): HTMLKColumnElement;
+    };
+    interface HTMLKDialogElement extends Components.KDialog, HTMLStencilElement {
+    }
+    var HTMLKDialogElement: {
+        prototype: HTMLKDialogElement;
+        new (): HTMLKDialogElement;
+    };
+    interface HTMLKDialogActionsElement extends Components.KDialogActions, HTMLStencilElement {
+    }
+    var HTMLKDialogActionsElement: {
+        prototype: HTMLKDialogActionsElement;
+        new (): HTMLKDialogActionsElement;
+    };
+    interface HTMLKDialogBodyElement extends Components.KDialogBody, HTMLStencilElement {
+    }
+    var HTMLKDialogBodyElement: {
+        prototype: HTMLKDialogBodyElement;
+        new (): HTMLKDialogBodyElement;
+    };
+    interface HTMLKDialogContentElement extends Components.KDialogContent, HTMLStencilElement {
+    }
+    var HTMLKDialogContentElement: {
+        prototype: HTMLKDialogContentElement;
+        new (): HTMLKDialogContentElement;
+    };
+    interface HTMLKDialogHeaderElement extends Components.KDialogHeader, HTMLStencilElement {
+    }
+    var HTMLKDialogHeaderElement: {
+        prototype: HTMLKDialogHeaderElement;
+        new (): HTMLKDialogHeaderElement;
+    };
+    interface HTMLKDividerElement extends Components.KDivider, HTMLStencilElement {
+    }
+    var HTMLKDividerElement: {
+        prototype: HTMLKDividerElement;
+        new (): HTMLKDividerElement;
+    };
+    interface HTMLKDropdownElement extends Components.KDropdown, HTMLStencilElement {
+    }
+    var HTMLKDropdownElement: {
+        prototype: HTMLKDropdownElement;
+        new (): HTMLKDropdownElement;
+    };
+    interface HTMLKDropdownItemElement extends Components.KDropdownItem, HTMLStencilElement {
+    }
+    var HTMLKDropdownItemElement: {
+        prototype: HTMLKDropdownItemElement;
+        new (): HTMLKDropdownItemElement;
+    };
+    interface HTMLKGridElement extends Components.KGrid, HTMLStencilElement {
+    }
+    var HTMLKGridElement: {
+        prototype: HTMLKGridElement;
+        new (): HTMLKGridElement;
+    };
     interface HTMLKImgElement extends Components.KImg, HTMLStencilElement {
     }
     var HTMLKImgElement: {
         prototype: HTMLKImgElement;
         new (): HTMLKImgElement;
+    };
+    interface HTMLKRowElement extends Components.KRow, HTMLStencilElement {
+    }
+    var HTMLKRowElement: {
+        prototype: HTMLKRowElement;
+        new (): HTMLKRowElement;
     };
     interface HTMLElementTagNameMap {
         "ihg-button": HTMLIhgButtonElement;
@@ -82,7 +328,27 @@ declare global {
         "k-banner-text": HTMLKBannerTextElement;
         "k-breadcrumbs": HTMLKBreadcrumbsElement;
         "k-breadcrumbs-item": HTMLKBreadcrumbsItemElement;
+        "k-button": HTMLKButtonElement;
+        "k-card": HTMLKCardElement;
+        "k-carousel": HTMLKCarouselElement;
+        "k-carousel-item": HTMLKCarouselItemElement;
+        "k-checkbox": HTMLKCheckboxElement;
+        "k-collapse-item": HTMLKCollapseItemElement;
+        "k-collapse-list": HTMLKCollapseListElement;
+        "k-collapse-menu": HTMLKCollapseMenuElement;
+        "k-collapse-parent": HTMLKCollapseParentElement;
+        "k-column": HTMLKColumnElement;
+        "k-dialog": HTMLKDialogElement;
+        "k-dialog-actions": HTMLKDialogActionsElement;
+        "k-dialog-body": HTMLKDialogBodyElement;
+        "k-dialog-content": HTMLKDialogContentElement;
+        "k-dialog-header": HTMLKDialogHeaderElement;
+        "k-divider": HTMLKDividerElement;
+        "k-dropdown": HTMLKDropdownElement;
+        "k-dropdown-item": HTMLKDropdownItemElement;
+        "k-grid": HTMLKGridElement;
         "k-img": HTMLKImgElement;
+        "k-row": HTMLKRowElement;
     }
 }
 declare namespace LocalJSX {
@@ -104,12 +370,145 @@ declare namespace LocalJSX {
     interface KBreadcrumbsItem {
         "current"?: boolean;
     }
+    interface KButton {
+        "color"?: 'primary' | 'secondary' | 'terciary';
+        "disabled"?: boolean;
+        "elevation"?: boolean;
+        "shape"?: 'full' | 'round' | 'smooth';
+        "size"?: 'large' | 'medium' | 'small';
+    }
+    interface KCard {
+    }
+    interface KCarousel {
+        "showDots"?: boolean;
+        "steps"?: number;
+        "transitionDuration"?: number;
+    }
+    interface KCarouselItem {
+    }
+    interface KCheckbox {
+        "checked"?: boolean;
+        "disabled"?: boolean;
+        "onValueChange"?: (event: CustomEvent<any>) => void;
+        "value"?: string;
+    }
+    interface KCollapseItem {
+        "disabled"?: boolean;
+    }
+    interface KCollapseList {
+    }
+    interface KCollapseMenu {
+        "position"?: 'right' | 'left';
+    }
+    interface KCollapseParent {
+    }
+    interface KColumn {
+        "fluid"?: boolean;
+        "size"?: | '1'
+    | '2'
+    | '3'
+    | '4'
+    | '5'
+    | '6'
+    | '7'
+    | '8'
+    | '9'
+    | '10'
+    | '11'
+    | '12';
+        "sizelg"?: | '1'
+    | '2'
+    | '3'
+    | '4'
+    | '5'
+    | '6'
+    | '7'
+    | '8'
+    | '9'
+    | '10'
+    | '11'
+    | '12';
+        "sizemd"?: | '1'
+    | '2'
+    | '3'
+    | '4'
+    | '5'
+    | '6'
+    | '7'
+    | '8'
+    | '9'
+    | '10'
+    | '11'
+    | '12';
+        "sizesm"?: | '1'
+    | '2'
+    | '3'
+    | '4'
+    | '5'
+    | '6'
+    | '7'
+    | '8'
+    | '9'
+    | '10'
+    | '11'
+    | '12';
+        "sizexl"?: | '1'
+    | '2'
+    | '3'
+    | '4'
+    | '5'
+    | '6'
+    | '7'
+    | '8'
+    | '9'
+    | '10'
+    | '11'
+    | '12';
+    }
+    interface KDialog {
+    }
+    interface KDialogActions {
+    }
+    interface KDialogBody {
+    }
+    interface KDialogContent {
+    }
+    interface KDialogHeader {
+    }
+    interface KDivider {
+    }
+    interface KDropdown {
+        "color"?: 'primary' | 'secondary' | 'terciary';
+        "disabled"?: boolean;
+        "helperText"?: string;
+        "label"?: string;
+        "validationState"?: '' | 'success' | 'error';
+        "variant"?: 'button' | 'input' | 'table';
+    }
+    interface KDropdownItem {
+        "checked"?: boolean;
+        "disabled"?: boolean;
+        "name"?: string;
+        "onSelectChanged"?: (event: CustomEvent<any>) => void;
+        "onValueChanged"?: (event: CustomEvent<{
+    id: any;
+    value: any;
+    text: string;
+  }>) => void;
+        "value"?: string;
+    }
+    interface KGrid {
+        "fluid"?: boolean;
+    }
     interface KImg {
         "alt"?: string;
         "fit"?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
         "height"?: number;
         "src"?: string;
         "width"?: number;
+    }
+    interface KRow {
+        "spacing"?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     }
     interface IntrinsicElements {
         "ihg-button": IhgButton;
@@ -118,7 +517,27 @@ declare namespace LocalJSX {
         "k-banner-text": KBannerText;
         "k-breadcrumbs": KBreadcrumbs;
         "k-breadcrumbs-item": KBreadcrumbsItem;
+        "k-button": KButton;
+        "k-card": KCard;
+        "k-carousel": KCarousel;
+        "k-carousel-item": KCarouselItem;
+        "k-checkbox": KCheckbox;
+        "k-collapse-item": KCollapseItem;
+        "k-collapse-list": KCollapseList;
+        "k-collapse-menu": KCollapseMenu;
+        "k-collapse-parent": KCollapseParent;
+        "k-column": KColumn;
+        "k-dialog": KDialog;
+        "k-dialog-actions": KDialogActions;
+        "k-dialog-body": KDialogBody;
+        "k-dialog-content": KDialogContent;
+        "k-dialog-header": KDialogHeader;
+        "k-divider": KDivider;
+        "k-dropdown": KDropdown;
+        "k-dropdown-item": KDropdownItem;
+        "k-grid": KGrid;
         "k-img": KImg;
+        "k-row": KRow;
     }
 }
 export { LocalJSX as JSX };
@@ -131,7 +550,27 @@ declare module "@stencil/core" {
             "k-banner-text": LocalJSX.KBannerText & JSXBase.HTMLAttributes<HTMLKBannerTextElement>;
             "k-breadcrumbs": LocalJSX.KBreadcrumbs & JSXBase.HTMLAttributes<HTMLKBreadcrumbsElement>;
             "k-breadcrumbs-item": LocalJSX.KBreadcrumbsItem & JSXBase.HTMLAttributes<HTMLKBreadcrumbsItemElement>;
+            "k-button": LocalJSX.KButton & JSXBase.HTMLAttributes<HTMLKButtonElement>;
+            "k-card": LocalJSX.KCard & JSXBase.HTMLAttributes<HTMLKCardElement>;
+            "k-carousel": LocalJSX.KCarousel & JSXBase.HTMLAttributes<HTMLKCarouselElement>;
+            "k-carousel-item": LocalJSX.KCarouselItem & JSXBase.HTMLAttributes<HTMLKCarouselItemElement>;
+            "k-checkbox": LocalJSX.KCheckbox & JSXBase.HTMLAttributes<HTMLKCheckboxElement>;
+            "k-collapse-item": LocalJSX.KCollapseItem & JSXBase.HTMLAttributes<HTMLKCollapseItemElement>;
+            "k-collapse-list": LocalJSX.KCollapseList & JSXBase.HTMLAttributes<HTMLKCollapseListElement>;
+            "k-collapse-menu": LocalJSX.KCollapseMenu & JSXBase.HTMLAttributes<HTMLKCollapseMenuElement>;
+            "k-collapse-parent": LocalJSX.KCollapseParent & JSXBase.HTMLAttributes<HTMLKCollapseParentElement>;
+            "k-column": LocalJSX.KColumn & JSXBase.HTMLAttributes<HTMLKColumnElement>;
+            "k-dialog": LocalJSX.KDialog & JSXBase.HTMLAttributes<HTMLKDialogElement>;
+            "k-dialog-actions": LocalJSX.KDialogActions & JSXBase.HTMLAttributes<HTMLKDialogActionsElement>;
+            "k-dialog-body": LocalJSX.KDialogBody & JSXBase.HTMLAttributes<HTMLKDialogBodyElement>;
+            "k-dialog-content": LocalJSX.KDialogContent & JSXBase.HTMLAttributes<HTMLKDialogContentElement>;
+            "k-dialog-header": LocalJSX.KDialogHeader & JSXBase.HTMLAttributes<HTMLKDialogHeaderElement>;
+            "k-divider": LocalJSX.KDivider & JSXBase.HTMLAttributes<HTMLKDividerElement>;
+            "k-dropdown": LocalJSX.KDropdown & JSXBase.HTMLAttributes<HTMLKDropdownElement>;
+            "k-dropdown-item": LocalJSX.KDropdownItem & JSXBase.HTMLAttributes<HTMLKDropdownItemElement>;
+            "k-grid": LocalJSX.KGrid & JSXBase.HTMLAttributes<HTMLKGridElement>;
             "k-img": LocalJSX.KImg & JSXBase.HTMLAttributes<HTMLKImgElement>;
+            "k-row": LocalJSX.KRow & JSXBase.HTMLAttributes<HTMLKRowElement>;
         }
     }
 }

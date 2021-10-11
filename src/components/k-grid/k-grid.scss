@@ -1,0 +1,23 @@
+@import '../../styles/partials/breakpoints';
+
+:host(.KGrid) {
+  display: block;
+  max-width: 100%;
+  padding: 0 8px;
+
+  @include mobile {
+    padding: 0 12px;
+  }
+
+  @include tablet {
+    padding: 0 14px;
+  }
+
+  @include desktop-full {
+    padding: 0 48px;
+  }
+}
+
+:host(.KGrid--fluid) {
+  padding: unset;
+}

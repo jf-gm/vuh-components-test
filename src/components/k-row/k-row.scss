@@ -1,0 +1,26 @@
+:host(.KRow) {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
+}
+
+:host(.KRow--spacing-xs) {
+  margin: 4px 0;
+}
+
+:host(.KRow--spacing-sm) {
+  margin: 8px 0;
+}
+
+:host(.KRow--spacing-md) {
+  margin: 16px 0;
+}
+
+:host(.KRow--spacing-lg) {
+  margin: 24px 0;
+}
+
+:host(.KRow--spacing-xl) {
+  margin: 32px 0;
+}
