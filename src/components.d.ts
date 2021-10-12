@@ -6,11 +6,6 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface IhgButton {
-        "disabled": boolean;
-        "label": string;
-        "type": 'primary' | 'secondary';
-    }
     interface KAvatar {
         "size"?: 'small' | 'medium' | 'large';
     }
@@ -118,6 +113,8 @@ export namespace Components {
     | '11'
     | '12';
     }
+    interface KContent {
+    }
     interface KDialog {
     }
     interface KDialogActions {
@@ -129,6 +126,9 @@ export namespace Components {
     interface KDialogHeader {
     }
     interface KDivider {
+    }
+    interface KDrawer {
+        "forKey": string;
     }
     interface KDropdown {
         "color": 'primary' | 'secondary' | 'terciary';
@@ -273,20 +273,133 @@ export namespace Components {
     interface KRow {
         "spacing"?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     }
+    interface KSearchBar {
+        "disabled"?: boolean;
+        "maxLength"?: number;
+        "minLength"?: number;
+        "name"?: string;
+        "placeholder"?: string;
+        "type": 'solid' | 'outlined';
+        "value"?: string;
+    }
+    interface KSnackbar {
+        "text": string;
+    }
+    interface KSpinner {
+        "color"?: | 'primary'
+    | 'primary800'
+    | 'primary700'
+    | 'primary600'
+    | 'primary500'
+    | 'primary400'
+    | 'primary300'
+    | 'primary200'
+    | 'primary100'
+    | 'gray500'
+    | 'gray400'
+    | 'gray300'
+    | 'gray200'
+    | 'gray100'
+    | 'gray50'
+    | 'error200'
+    | 'error100'
+    | 'warning200'
+    | 'warning100'
+    | 'success200'
+    | 'success100';
+        "size"?: number;
+        "strong"?: number;
+    }
+    interface KStepper {
+    }
+    interface KStepperContent {
+    }
+    interface KStepperContentItem {
+    }
+    interface KStepperHeader {
+    }
+    interface KStepperHeaderItem {
+        "done": boolean;
+        "started": boolean;
+    }
+    interface KSwitch {
+        "checked"?: boolean;
+        "disabled"?: boolean;
+        "label"?: string;
+    }
     interface KTab {
     }
     interface KTabItem {
         "current": boolean;
         "disabled": boolean;
     }
+    interface KTable {
+    }
+    interface KTableColumn {
+        "size"?: '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10';
+    }
+    interface KTableHeaderColumn {
+        "active"?: boolean;
+        "default": boolean;
+        "disabled"?: boolean;
+        "size"?: '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10';
+        "sortable"?: boolean;
+    }
+    interface KTableRow {
+        "type"?: 'default' | 'header' | 'navbar';
+    }
+    interface KTag {
+    }
+    interface KTextField {
+        "disabled"?: boolean;
+        "helperText"?: string;
+        "label": string;
+        "maxLength"?: number;
+        "minLength"?: number;
+        "name"?: string;
+        "validationState"?: '' | 'success' | 'error';
+        "value"?: string;
+    }
+    interface KTooltip {
+        "position": 'top' | 'left' | 'right' | 'bottom';
+        "text": string;
+    }
+    interface KTypography {
+        "color"?: | 'primary'
+    | 'primary800'
+    | 'primary700'
+    | 'primary600'
+    | 'primary500'
+    | 'primary400'
+    | 'primary300'
+    | 'primary200'
+    | 'primary100'
+    | 'gray500'
+    | 'gray400'
+    | 'gray300'
+    | 'gray200'
+    | 'gray100'
+    | 'gray50'
+    | 'error200'
+    | 'error100'
+    | 'warning200'
+    | 'warning100'
+    | 'success200'
+    | 'success100';
+        "variant"?: | 'h1'
+    | 'h2'
+    | 'h3'
+    | 'h4'
+    | 'h5'
+    | 'p'
+    | 'caption'
+    | 'body1'
+    | 'body2'
+    | 'button'
+    | 'link';
+    }
 }
 declare global {
-    interface HTMLIhgButtonElement extends Components.IhgButton, HTMLStencilElement {
-    }
-    var HTMLIhgButtonElement: {
-        prototype: HTMLIhgButtonElement;
-        new (): HTMLIhgButtonElement;
-    };
     interface HTMLKAvatarElement extends Components.KAvatar, HTMLStencilElement {
     }
     var HTMLKAvatarElement: {
@@ -377,6 +490,12 @@ declare global {
         prototype: HTMLKColumnElement;
         new (): HTMLKColumnElement;
     };
+    interface HTMLKContentElement extends Components.KContent, HTMLStencilElement {
+    }
+    var HTMLKContentElement: {
+        prototype: HTMLKContentElement;
+        new (): HTMLKContentElement;
+    };
     interface HTMLKDialogElement extends Components.KDialog, HTMLStencilElement {
     }
     var HTMLKDialogElement: {
@@ -412,6 +531,12 @@ declare global {
     var HTMLKDividerElement: {
         prototype: HTMLKDividerElement;
         new (): HTMLKDividerElement;
+    };
+    interface HTMLKDrawerElement extends Components.KDrawer, HTMLStencilElement {
+    }
+    var HTMLKDrawerElement: {
+        prototype: HTMLKDrawerElement;
+        new (): HTMLKDrawerElement;
     };
     interface HTMLKDropdownElement extends Components.KDropdown, HTMLStencilElement {
     }
@@ -545,6 +670,60 @@ declare global {
         prototype: HTMLKRowElement;
         new (): HTMLKRowElement;
     };
+    interface HTMLKSearchBarElement extends Components.KSearchBar, HTMLStencilElement {
+    }
+    var HTMLKSearchBarElement: {
+        prototype: HTMLKSearchBarElement;
+        new (): HTMLKSearchBarElement;
+    };
+    interface HTMLKSnackbarElement extends Components.KSnackbar, HTMLStencilElement {
+    }
+    var HTMLKSnackbarElement: {
+        prototype: HTMLKSnackbarElement;
+        new (): HTMLKSnackbarElement;
+    };
+    interface HTMLKSpinnerElement extends Components.KSpinner, HTMLStencilElement {
+    }
+    var HTMLKSpinnerElement: {
+        prototype: HTMLKSpinnerElement;
+        new (): HTMLKSpinnerElement;
+    };
+    interface HTMLKStepperElement extends Components.KStepper, HTMLStencilElement {
+    }
+    var HTMLKStepperElement: {
+        prototype: HTMLKStepperElement;
+        new (): HTMLKStepperElement;
+    };
+    interface HTMLKStepperContentElement extends Components.KStepperContent, HTMLStencilElement {
+    }
+    var HTMLKStepperContentElement: {
+        prototype: HTMLKStepperContentElement;
+        new (): HTMLKStepperContentElement;
+    };
+    interface HTMLKStepperContentItemElement extends Components.KStepperContentItem, HTMLStencilElement {
+    }
+    var HTMLKStepperContentItemElement: {
+        prototype: HTMLKStepperContentItemElement;
+        new (): HTMLKStepperContentItemElement;
+    };
+    interface HTMLKStepperHeaderElement extends Components.KStepperHeader, HTMLStencilElement {
+    }
+    var HTMLKStepperHeaderElement: {
+        prototype: HTMLKStepperHeaderElement;
+        new (): HTMLKStepperHeaderElement;
+    };
+    interface HTMLKStepperHeaderItemElement extends Components.KStepperHeaderItem, HTMLStencilElement {
+    }
+    var HTMLKStepperHeaderItemElement: {
+        prototype: HTMLKStepperHeaderItemElement;
+        new (): HTMLKStepperHeaderItemElement;
+    };
+    interface HTMLKSwitchElement extends Components.KSwitch, HTMLStencilElement {
+    }
+    var HTMLKSwitchElement: {
+        prototype: HTMLKSwitchElement;
+        new (): HTMLKSwitchElement;
+    };
     interface HTMLKTabElement extends Components.KTab, HTMLStencilElement {
     }
     var HTMLKTabElement: {
@@ -557,8 +736,55 @@ declare global {
         prototype: HTMLKTabItemElement;
         new (): HTMLKTabItemElement;
     };
+    interface HTMLKTableElement extends Components.KTable, HTMLStencilElement {
+    }
+    var HTMLKTableElement: {
+        prototype: HTMLKTableElement;
+        new (): HTMLKTableElement;
+    };
+    interface HTMLKTableColumnElement extends Components.KTableColumn, HTMLStencilElement {
+    }
+    var HTMLKTableColumnElement: {
+        prototype: HTMLKTableColumnElement;
+        new (): HTMLKTableColumnElement;
+    };
+    interface HTMLKTableHeaderColumnElement extends Components.KTableHeaderColumn, HTMLStencilElement {
+    }
+    var HTMLKTableHeaderColumnElement: {
+        prototype: HTMLKTableHeaderColumnElement;
+        new (): HTMLKTableHeaderColumnElement;
+    };
+    interface HTMLKTableRowElement extends Components.KTableRow, HTMLStencilElement {
+    }
+    var HTMLKTableRowElement: {
+        prototype: HTMLKTableRowElement;
+        new (): HTMLKTableRowElement;
+    };
+    interface HTMLKTagElement extends Components.KTag, HTMLStencilElement {
+    }
+    var HTMLKTagElement: {
+        prototype: HTMLKTagElement;
+        new (): HTMLKTagElement;
+    };
+    interface HTMLKTextFieldElement extends Components.KTextField, HTMLStencilElement {
+    }
+    var HTMLKTextFieldElement: {
+        prototype: HTMLKTextFieldElement;
+        new (): HTMLKTextFieldElement;
+    };
+    interface HTMLKTooltipElement extends Components.KTooltip, HTMLStencilElement {
+    }
+    var HTMLKTooltipElement: {
+        prototype: HTMLKTooltipElement;
+        new (): HTMLKTooltipElement;
+    };
+    interface HTMLKTypographyElement extends Components.KTypography, HTMLStencilElement {
+    }
+    var HTMLKTypographyElement: {
+        prototype: HTMLKTypographyElement;
+        new (): HTMLKTypographyElement;
+    };
     interface HTMLElementTagNameMap {
-        "ihg-button": HTMLIhgButtonElement;
         "k-avatar": HTMLKAvatarElement;
         "k-banner": HTMLKBannerElement;
         "k-banner-text": HTMLKBannerTextElement;
@@ -574,12 +800,14 @@ declare global {
         "k-collapse-menu": HTMLKCollapseMenuElement;
         "k-collapse-parent": HTMLKCollapseParentElement;
         "k-column": HTMLKColumnElement;
+        "k-content": HTMLKContentElement;
         "k-dialog": HTMLKDialogElement;
         "k-dialog-actions": HTMLKDialogActionsElement;
         "k-dialog-body": HTMLKDialogBodyElement;
         "k-dialog-content": HTMLKDialogContentElement;
         "k-dialog-header": HTMLKDialogHeaderElement;
         "k-divider": HTMLKDividerElement;
+        "k-drawer": HTMLKDrawerElement;
         "k-dropdown": HTMLKDropdownElement;
         "k-dropdown-item": HTMLKDropdownItemElement;
         "k-elevation": HTMLKElevationElement;
@@ -602,16 +830,28 @@ declare global {
         "k-radio-button": HTMLKRadioButtonElement;
         "k-radio-button-group": HTMLKRadioButtonGroupElement;
         "k-row": HTMLKRowElement;
+        "k-search-bar": HTMLKSearchBarElement;
+        "k-snackbar": HTMLKSnackbarElement;
+        "k-spinner": HTMLKSpinnerElement;
+        "k-stepper": HTMLKStepperElement;
+        "k-stepper-content": HTMLKStepperContentElement;
+        "k-stepper-content-item": HTMLKStepperContentItemElement;
+        "k-stepper-header": HTMLKStepperHeaderElement;
+        "k-stepper-header-item": HTMLKStepperHeaderItemElement;
+        "k-switch": HTMLKSwitchElement;
         "k-tab": HTMLKTabElement;
         "k-tab-item": HTMLKTabItemElement;
+        "k-table": HTMLKTableElement;
+        "k-table-column": HTMLKTableColumnElement;
+        "k-table-header-column": HTMLKTableHeaderColumnElement;
+        "k-table-row": HTMLKTableRowElement;
+        "k-tag": HTMLKTagElement;
+        "k-text-field": HTMLKTextFieldElement;
+        "k-tooltip": HTMLKTooltipElement;
+        "k-typography": HTMLKTypographyElement;
     }
 }
 declare namespace LocalJSX {
-    interface IhgButton {
-        "disabled"?: boolean;
-        "label"?: string;
-        "type"?: 'primary' | 'secondary';
-    }
     interface KAvatar {
         "size"?: 'small' | 'medium' | 'large';
     }
@@ -720,6 +960,8 @@ declare namespace LocalJSX {
     | '11'
     | '12';
     }
+    interface KContent {
+    }
     interface KDialog {
     }
     interface KDialogActions {
@@ -731,6 +973,9 @@ declare namespace LocalJSX {
     interface KDialogHeader {
     }
     interface KDivider {
+    }
+    interface KDrawer {
+        "forKey"?: string;
     }
     interface KDropdown {
         "color"?: 'primary' | 'secondary' | 'terciary';
@@ -891,6 +1136,62 @@ declare namespace LocalJSX {
     interface KRow {
         "spacing"?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     }
+    interface KSearchBar {
+        "disabled"?: boolean;
+        "maxLength"?: number;
+        "minLength"?: number;
+        "name"?: string;
+        "onValueChange"?: (event: CustomEvent<any>) => void;
+        "placeholder"?: string;
+        "type"?: 'solid' | 'outlined';
+        "value"?: string;
+    }
+    interface KSnackbar {
+        "text"?: string;
+    }
+    interface KSpinner {
+        "color"?: | 'primary'
+    | 'primary800'
+    | 'primary700'
+    | 'primary600'
+    | 'primary500'
+    | 'primary400'
+    | 'primary300'
+    | 'primary200'
+    | 'primary100'
+    | 'gray500'
+    | 'gray400'
+    | 'gray300'
+    | 'gray200'
+    | 'gray100'
+    | 'gray50'
+    | 'error200'
+    | 'error100'
+    | 'warning200'
+    | 'warning100'
+    | 'success200'
+    | 'success100';
+        "size"?: number;
+        "strong"?: number;
+    }
+    interface KStepper {
+    }
+    interface KStepperContent {
+    }
+    interface KStepperContentItem {
+    }
+    interface KStepperHeader {
+    }
+    interface KStepperHeaderItem {
+        "done"?: boolean;
+        "onStepClicked"?: (event: CustomEvent<{ stepNumber: number; translate: number }>) => void;
+        "started"?: boolean;
+    }
+    interface KSwitch {
+        "checked"?: boolean;
+        "disabled"?: boolean;
+        "label"?: string;
+    }
     interface KTab {
     }
     interface KTabItem {
@@ -898,8 +1199,84 @@ declare namespace LocalJSX {
         "disabled"?: boolean;
         "onValueChanged"?: (event: CustomEvent<{ value: boolean; id: String }>) => void;
     }
+    interface KTable {
+    }
+    interface KTableColumn {
+        "size"?: '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10';
+    }
+    interface KTableHeaderColumn {
+        "active"?: boolean;
+        "default"?: boolean;
+        "disabled"?: boolean;
+        "onActiveChanged"?: (event: CustomEvent<{
+    id: String;
+    active: any;
+    sortBy: any;
+  }>) => void;
+        "onSizeChanged"?: (event: CustomEvent<{
+    sizeHasChanged: boolean;
+  }>) => void;
+        "size"?: '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10';
+        "sortable"?: boolean;
+    }
+    interface KTableRow {
+        "onIsTypeNavBar"?: (event: CustomEvent<{
+    navBarEl: HTMLElement;
+  }>) => void;
+        "type"?: 'default' | 'header' | 'navbar';
+    }
+    interface KTag {
+    }
+    interface KTextField {
+        "disabled"?: boolean;
+        "helperText"?: string;
+        "label"?: string;
+        "maxLength"?: number;
+        "minLength"?: number;
+        "name"?: string;
+        "onValueChange"?: (event: CustomEvent<any>) => void;
+        "validationState"?: '' | 'success' | 'error';
+        "value"?: string;
+    }
+    interface KTooltip {
+        "position"?: 'top' | 'left' | 'right' | 'bottom';
+        "text"?: string;
+    }
+    interface KTypography {
+        "color"?: | 'primary'
+    | 'primary800'
+    | 'primary700'
+    | 'primary600'
+    | 'primary500'
+    | 'primary400'
+    | 'primary300'
+    | 'primary200'
+    | 'primary100'
+    | 'gray500'
+    | 'gray400'
+    | 'gray300'
+    | 'gray200'
+    | 'gray100'
+    | 'gray50'
+    | 'error200'
+    | 'error100'
+    | 'warning200'
+    | 'warning100'
+    | 'success200'
+    | 'success100';
+        "variant"?: | 'h1'
+    | 'h2'
+    | 'h3'
+    | 'h4'
+    | 'h5'
+    | 'p'
+    | 'caption'
+    | 'body1'
+    | 'body2'
+    | 'button'
+    | 'link';
+    }
     interface IntrinsicElements {
-        "ihg-button": IhgButton;
         "k-avatar": KAvatar;
         "k-banner": KBanner;
         "k-banner-text": KBannerText;
@@ -915,12 +1292,14 @@ declare namespace LocalJSX {
         "k-collapse-menu": KCollapseMenu;
         "k-collapse-parent": KCollapseParent;
         "k-column": KColumn;
+        "k-content": KContent;
         "k-dialog": KDialog;
         "k-dialog-actions": KDialogActions;
         "k-dialog-body": KDialogBody;
         "k-dialog-content": KDialogContent;
         "k-dialog-header": KDialogHeader;
         "k-divider": KDivider;
+        "k-drawer": KDrawer;
         "k-dropdown": KDropdown;
         "k-dropdown-item": KDropdownItem;
         "k-elevation": KElevation;
@@ -943,15 +1322,31 @@ declare namespace LocalJSX {
         "k-radio-button": KRadioButton;
         "k-radio-button-group": KRadioButtonGroup;
         "k-row": KRow;
+        "k-search-bar": KSearchBar;
+        "k-snackbar": KSnackbar;
+        "k-spinner": KSpinner;
+        "k-stepper": KStepper;
+        "k-stepper-content": KStepperContent;
+        "k-stepper-content-item": KStepperContentItem;
+        "k-stepper-header": KStepperHeader;
+        "k-stepper-header-item": KStepperHeaderItem;
+        "k-switch": KSwitch;
         "k-tab": KTab;
         "k-tab-item": KTabItem;
+        "k-table": KTable;
+        "k-table-column": KTableColumn;
+        "k-table-header-column": KTableHeaderColumn;
+        "k-table-row": KTableRow;
+        "k-tag": KTag;
+        "k-text-field": KTextField;
+        "k-tooltip": KTooltip;
+        "k-typography": KTypography;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "ihg-button": LocalJSX.IhgButton & JSXBase.HTMLAttributes<HTMLIhgButtonElement>;
             "k-avatar": LocalJSX.KAvatar & JSXBase.HTMLAttributes<HTMLKAvatarElement>;
             "k-banner": LocalJSX.KBanner & JSXBase.HTMLAttributes<HTMLKBannerElement>;
             "k-banner-text": LocalJSX.KBannerText & JSXBase.HTMLAttributes<HTMLKBannerTextElement>;
@@ -967,12 +1362,14 @@ declare module "@stencil/core" {
             "k-collapse-menu": LocalJSX.KCollapseMenu & JSXBase.HTMLAttributes<HTMLKCollapseMenuElement>;
             "k-collapse-parent": LocalJSX.KCollapseParent & JSXBase.HTMLAttributes<HTMLKCollapseParentElement>;
             "k-column": LocalJSX.KColumn & JSXBase.HTMLAttributes<HTMLKColumnElement>;
+            "k-content": LocalJSX.KContent & JSXBase.HTMLAttributes<HTMLKContentElement>;
             "k-dialog": LocalJSX.KDialog & JSXBase.HTMLAttributes<HTMLKDialogElement>;
             "k-dialog-actions": LocalJSX.KDialogActions & JSXBase.HTMLAttributes<HTMLKDialogActionsElement>;
             "k-dialog-body": LocalJSX.KDialogBody & JSXBase.HTMLAttributes<HTMLKDialogBodyElement>;
             "k-dialog-content": LocalJSX.KDialogContent & JSXBase.HTMLAttributes<HTMLKDialogContentElement>;
             "k-dialog-header": LocalJSX.KDialogHeader & JSXBase.HTMLAttributes<HTMLKDialogHeaderElement>;
             "k-divider": LocalJSX.KDivider & JSXBase.HTMLAttributes<HTMLKDividerElement>;
+            "k-drawer": LocalJSX.KDrawer & JSXBase.HTMLAttributes<HTMLKDrawerElement>;
             "k-dropdown": LocalJSX.KDropdown & JSXBase.HTMLAttributes<HTMLKDropdownElement>;
             "k-dropdown-item": LocalJSX.KDropdownItem & JSXBase.HTMLAttributes<HTMLKDropdownItemElement>;
             "k-elevation": LocalJSX.KElevation & JSXBase.HTMLAttributes<HTMLKElevationElement>;
@@ -995,8 +1392,25 @@ declare module "@stencil/core" {
             "k-radio-button": LocalJSX.KRadioButton & JSXBase.HTMLAttributes<HTMLKRadioButtonElement>;
             "k-radio-button-group": LocalJSX.KRadioButtonGroup & JSXBase.HTMLAttributes<HTMLKRadioButtonGroupElement>;
             "k-row": LocalJSX.KRow & JSXBase.HTMLAttributes<HTMLKRowElement>;
+            "k-search-bar": LocalJSX.KSearchBar & JSXBase.HTMLAttributes<HTMLKSearchBarElement>;
+            "k-snackbar": LocalJSX.KSnackbar & JSXBase.HTMLAttributes<HTMLKSnackbarElement>;
+            "k-spinner": LocalJSX.KSpinner & JSXBase.HTMLAttributes<HTMLKSpinnerElement>;
+            "k-stepper": LocalJSX.KStepper & JSXBase.HTMLAttributes<HTMLKStepperElement>;
+            "k-stepper-content": LocalJSX.KStepperContent & JSXBase.HTMLAttributes<HTMLKStepperContentElement>;
+            "k-stepper-content-item": LocalJSX.KStepperContentItem & JSXBase.HTMLAttributes<HTMLKStepperContentItemElement>;
+            "k-stepper-header": LocalJSX.KStepperHeader & JSXBase.HTMLAttributes<HTMLKStepperHeaderElement>;
+            "k-stepper-header-item": LocalJSX.KStepperHeaderItem & JSXBase.HTMLAttributes<HTMLKStepperHeaderItemElement>;
+            "k-switch": LocalJSX.KSwitch & JSXBase.HTMLAttributes<HTMLKSwitchElement>;
             "k-tab": LocalJSX.KTab & JSXBase.HTMLAttributes<HTMLKTabElement>;
             "k-tab-item": LocalJSX.KTabItem & JSXBase.HTMLAttributes<HTMLKTabItemElement>;
+            "k-table": LocalJSX.KTable & JSXBase.HTMLAttributes<HTMLKTableElement>;
+            "k-table-column": LocalJSX.KTableColumn & JSXBase.HTMLAttributes<HTMLKTableColumnElement>;
+            "k-table-header-column": LocalJSX.KTableHeaderColumn & JSXBase.HTMLAttributes<HTMLKTableHeaderColumnElement>;
+            "k-table-row": LocalJSX.KTableRow & JSXBase.HTMLAttributes<HTMLKTableRowElement>;
+            "k-tag": LocalJSX.KTag & JSXBase.HTMLAttributes<HTMLKTagElement>;
+            "k-text-field": LocalJSX.KTextField & JSXBase.HTMLAttributes<HTMLKTextFieldElement>;
+            "k-tooltip": LocalJSX.KTooltip & JSXBase.HTMLAttributes<HTMLKTooltipElement>;
+            "k-typography": LocalJSX.KTypography & JSXBase.HTMLAttributes<HTMLKTypographyElement>;
         }
     }
 }
