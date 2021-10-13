@@ -1,6 +1,7 @@
 import React from 'react';
 import { KButton } from '../../../component-library-react/src/components';
-
+import CodeViewer from '../../utils/CodeViewer.jsx';
+import '../../styles/stories.css';
 import './preview.css';
 
 export default {
@@ -28,6 +29,7 @@ const tableRender = (props: tableProps) => {
   return (
     <>
       <h1>{title}</h1>
+      <hr />
       <table>
         <tr>
           <td>disabled</td>
@@ -127,34 +129,119 @@ const buttonsTables: tableProps[] = [
   }
 ]
 
-const TemplateAll = (props) => (
-  <div className="buttons-container">
-    <div className="default">
-      <h1>Default button</h1>
-      <p>A button takes all width of parent container</p>
-      <KButton>
-        Default
-      </KButton>
+const TemplateAll = () => (
+  <div className="story-container">
+    <h1>Default Button</h1>
+    <hr />
+    <div className="story-description">
+      <p>
+        “Don’t wrap text. For maximum legibility,
+        a text label should remain on a single line.”
+      </p>
+      <p>
+        The length of the button depends on two factors:
+        <ul>
+          <li>
+            If the button is out of a container
+          </li>
+          <li>
+            Internal margins requested by the container if the button is within one
+          </li>
+        </ul>
+      </p>
+      <p>
+        When the button is inside a component it
+        will have a fixed size and cannot be adapted,
+        but if the button is outside a component it
+        will behave based on the columns
+      </p>
     </div>
+    <KButton>
+      Default
+    </KButton>
+    <CodeViewer>
+      {`
+  <k-button>
+    Default
+  </k-button>
+      `}
+    </CodeViewer>
     <div className="buttons">
       {buttonsTables.map((data) => tableRender(data))}
-      
     </div>
   </div>
-);
+)
 
 const TemplateDef = () => (
-  <div className="button-container">
-    <KButton>
-    </KButton>
+  <div className="story-container">
+    <h1>Default Button</h1>
+    <hr />
+    <div className="button-container">
+      <KButton>
+      </KButton>
+    </div>
+    <CodeViewer>
+      {`
+  <k-button>
+    Default
+  </k-button>
+      `}
+    </CodeViewer>
   </div>
 );
 
-const Template = (props) => (
-  <div className="button-container">
-    <KButton {...props}>
-      Click me
-    </KButton>
+const TemplateP = (props) => (
+  <div className="story-container">
+    <h1>Primary Button</h1>
+    <hr />
+    <div className="button-container">
+      <KButton {...props}>
+        Primary
+      </KButton>
+    </div>
+    <CodeViewer>
+      {`
+  <k-button color="primary" size="small" shape="smooth">
+    Primary
+  </k-button>
+      `}
+    </CodeViewer>
+  </div>
+);
+
+const TemplateS = (props) => (
+  <div className="story-container">
+    <h1>Secondary Button</h1>
+    <hr />
+    <div className="button-container">
+      <KButton {...props}>
+      </KButton>
+    </div>
+    <CodeViewer>
+      {`
+  <k-button color="secondary" size="small" shape="smooth">
+    Secondary
+  </k-button>
+      `}
+    </CodeViewer>
+  </div>
+);
+
+const TemplateT = (props) => (
+  <div className="story-container">
+    <h1>Terciary Button</h1>
+    <hr />
+    <div className="button-container">
+      <KButton {...props}>
+      </KButton>
+    </div>
+    <CodeViewer>
+      {`
+  <k-button color="terciary" size="small" shape="smooth">
+    Terciary
+  </k-button>
+      `}
+    </CodeViewer>
   </div>
 );
 
@@ -162,16 +249,16 @@ export const All = TemplateAll.bind({});
 
 export const Default = TemplateDef.bind({});
 
-export const Primary = Template.bind({});
+export const Primary = TemplateP.bind({});
 Primary.args = { ...defArgs };
 
-export const Secondary = Template.bind({});
+export const Secondary = TemplateS.bind({});
 Secondary.args = {
   ...defArgs,
   color: 'secondary'
 };
 
-export const Terciary = Template.bind({});
+export const Terciary = TemplateT.bind({});
 Terciary.args = {
   ...defArgs,
   color: 'terciary',
