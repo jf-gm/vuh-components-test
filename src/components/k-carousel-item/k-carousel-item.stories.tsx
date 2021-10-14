@@ -1,12 +1,13 @@
 import React from 'react';
 import { KCarouselItem, KImg } from '../../../component-library-react/src/components';
 import CodeViewer from '../../utils/CodeViewer.jsx';
+import { imgInterface } from '../../types';
 import '../../styles/stories.css';
 
-const imgProps = {
+const imgProps: imgInterface = {
   src: 'https://cdn.pixabay.com/photo/2019/11/03/01/56/landscape-4597742_1280.jpg',
   alt: 'the-ksquare-group',
-  height: '300',
+  height: 300,
   fit: 'cover'
 };
 

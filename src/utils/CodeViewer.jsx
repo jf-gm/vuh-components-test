@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { h } from '@stencil/core';
 
 const textOptions = {
-  view: 'View Code',
+  show: 'Show Code',
   hide: 'Hide Code'
 }
 
@@ -20,7 +20,7 @@ const componentName = ({children}) => {
   return (
     <div className="code-container">
       <button onClick={codeButtonHanlder}>
-        {textOption || textOption === -1 ? textOptions.view : textOptions.hide}
+        {textOption || textOption === -1 ? textOptions.show : textOptions.hide}
       </button>
       <pre className={textOption === -1 ? '' : (textOption ? 'hide' : 'show')}>
       <code>

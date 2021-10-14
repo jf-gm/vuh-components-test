@@ -1,6 +1,7 @@
 import React from 'react';
 import { KCarousel, KCarouselItem, KImg } from '../../../component-library-react/src/components';
 import CodeViewer from '../../utils/CodeViewer.jsx';
+import { imgInterface } from '../../types';
 import '../../styles/stories.css';
 
 export default {
@@ -8,13 +9,7 @@ export default {
   component: 'k-carousel'
 }
 
-interface imgProps {
-  src: string;
-  height: number;
-  fit: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
-}
-
-const itemsList: imgProps[] = [
+const itemsList: imgInterface[] = [
   {
     src: 'https://cdn.pixabay.com/photo/2019/11/03/01/56/landscape-4597742_1280.jpg',
     height: 300,
@@ -37,7 +32,7 @@ const itemsList: imgProps[] = [
   }
 ]
 
-const renderItems = (props: imgProps) => (
+const renderItems = (props: imgInterface) => (
   <KCarouselItem>
     <KImg {...props} />
   </KCarouselItem>
@@ -58,7 +53,7 @@ const Template = (props) => (
       </p>
     </div>
     <KCarousel {...props}>
-      {itemsList.map((data: imgProps) => renderItems(data))}
+      {itemsList.map((data: imgInterface) => renderItems(data))}
     </KCarousel>
     <CodeViewer>
       {`

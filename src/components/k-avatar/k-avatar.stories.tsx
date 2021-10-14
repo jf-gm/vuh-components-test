@@ -1,6 +1,7 @@
 import React from 'react';
 import { KAvatar, KImg } from '../../../component-library-react/src/components';
 import CodeViewer from '../../utils/CodeViewer.jsx';
+import { imgInterface } from '../../types';
 import '../../styles/stories.css';
 import './preview.css';
 
@@ -15,25 +16,25 @@ export default {
   },
 }
 
-const defImgProps = {
+const defImgProps: imgInterface = {
   src: "https://assets.gitlab-static.net/uploads/-/system/user/avatar/3112753/avatar.png?width=90",
   alt: 'the-ksquare-group',
   fit: 'cover'
 }
 
-const defImgSmall = {
+const defImgSmall: imgInterface = {
   ...defImgProps,
-  height: '50',
+  height: 50,
 }
 
 const defImgMedium = {
   ...defImgProps,
-  height: '80',
+  height: 80,
 }
 
 const defImgLarge = {
   ...defImgProps,
-  height: '150',
+  height: 150,
 }
 
 const TemplateAll = () => (

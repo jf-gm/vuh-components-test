@@ -1,6 +1,7 @@
 import React from 'react';
 import { KCard, KImg } from '../../../component-library-react/src/components';
 import CodeViewer from '../../utils/CodeViewer.jsx';
+import { imgInterface } from '../../types';
 import '../../styles/stories.css';
 
 export default {
@@ -8,10 +9,10 @@ export default {
   component: 'k-card'
 }
 
-const imgProps = {
+const imgProps: imgInterface = {
   src: 'https://cdn.pixabay.com/photo/2017/08/10/08/47/code-2620118_1280.jpg',
   alt: 'the-ksquare-group',
-  height: '300',
+  height: 300,
   fit: 'cover'
 };
 

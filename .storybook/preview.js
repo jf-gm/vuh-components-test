@@ -77,6 +77,17 @@ const storiesOrder = {
       'collapse parent': null,
       'collapse list': null,
       'collapse item': null,
+    },
+    'content': null,
+    'dialog': {},
+    'divider': {},
+    'drawer': {},
+    'dropdown': {},
+    'elevation': {},
+    'grid': {
+      'grid': null,
+      'column': null,
+      'row': null
     }
   },
 };
