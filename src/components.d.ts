@@ -245,6 +245,7 @@ export namespace Components {
         "show": boolean;
     }
     interface KNotification {
+        "listStart"?: 'left' | 'right';
         "notificationCount": number;
     }
     interface KNotificationGroup {
@@ -1107,6 +1108,7 @@ declare namespace LocalJSX {
         "show"?: boolean;
     }
     interface KNotification {
+        "listStart"?: 'left' | 'right';
         "notificationCount"?: number;
     }
     interface KNotificationGroup {

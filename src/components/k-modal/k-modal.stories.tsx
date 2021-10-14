@@ -1,5 +1,7 @@
 import React from 'react';
 import { KModal } from '../../../component-library-react/src/components';
+import CodeViewer from '../../utils/CodeViewer.jsx';
+import '../../styles/stories.css';
 
 export default {
   title: 'Components/Modal',
@@ -7,11 +9,24 @@ export default {
 };
 
 const Template = (props) => (
-  <KModal {...props}>
-    <p style={{color: '#0a0a0a', margin: '1.5em'}}>
+  <div className="story-container">
+    <h1>Modal</h1>
+    <hr />
+    <KModal {...props}>
+      <p style={{color: '#0a0a0a', margin: '1.5em'}}>
+        Hello world!
+      </p>
+    </KModal>
+    <CodeViewer>
+      {`
+  <k-modal show="true" hide-close-button="false">
+    <p style="margin: 1.5em;">
       Hello world!
     </p>
-  </KModal>
+  </k-modal>
+      `}
+    </CodeViewer>
+  </div>
 );
 
 export const Modal = Template.bind({});

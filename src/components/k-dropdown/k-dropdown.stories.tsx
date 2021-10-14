@@ -1,5 +1,7 @@
 import React from 'react';
 import { KDropdown, KDropdownItem } from '../../../component-library-react/src/components';
+import CodeViewer from '../../utils/CodeViewer.jsx';
+import '../../styles/stories.css';
 
 export default {
   title: 'Components/Dropdown',
@@ -7,20 +9,34 @@ export default {
 };
 
 const Template = (props) => (
-  <KDropdown {...props}>
-    <KDropdownItem name="op0" value="00">
-      Select yout option
-    </KDropdownItem>
-    <KDropdownItem name="op1" value="01">
-      Option 1
-    </KDropdownItem>
-    <KDropdownItem name="op2" value="02">
-      Option 2
-    </KDropdownItem>
-    <KDropdownItem name="op3" value="03">
-      Option 3
-    </KDropdownItem>
-  </KDropdown>
+  <div className="story-container">
+    <h1>Dropdown</h1>
+    <hr />
+    <KDropdown {...props}>
+      <KDropdownItem name="op0" value="00">
+        Select yout option
+      </KDropdownItem>
+      <KDropdownItem name="op1" value="01">
+        Option 1
+      </KDropdownItem>
+      <KDropdownItem name="op2" value="02">
+        Option 2
+      </KDropdownItem>
+      <KDropdownItem name="op3" value="03">
+        Option 3
+      </KDropdownItem>
+    </KDropdown>
+    <CodeViewer>
+      {`
+  <k-dropdown>
+    <k-dropdown-item name="op0" value="00">Select your option</k-dropdown-item>
+    <k-dropdown-item name="op1" value="01">Option 1</k-dropdown-item>
+    <k-dropdown-item name="op2" value="02">Option 2</k-dropdown-item>
+    <k-dropdown-item name="op3" value="03">Option 3</k-dropdown-item>
+  </k-dropdown>
+      `}
+    </CodeViewer>
+  </div>
 );
 
 export const Dropdown = Template.bind({});

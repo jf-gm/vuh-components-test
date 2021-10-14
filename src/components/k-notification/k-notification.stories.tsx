@@ -1,5 +1,7 @@
 import React from 'react';
 import { KNotification, KNotificationGroup, KNotificationItem } from '../../../component-library-react/src/components';
+import CodeViewer from '../../utils/CodeViewer.jsx';
+import '../../styles/stories.css';
 
 export default {
   title: 'Components/Notification',
@@ -13,28 +15,71 @@ const notificationProps = {
 
 const Item = (props) => (
   <KNotificationItem {...notificationProps} {...props}>
-    <p>
-      You are been assigned to the course 
-      <strong>
-        “The best Course of the world”
-      </strong>
+    <p style={{color: '#0a0a0a'}}>
+      You are been assigned to the
+      course <strong> “The best 
+      Course of the world” </strong>
     </p>
   </KNotificationItem>
 )
 
-const Template = () => (
-  <KNotification notificationCount={2}>
-    <KNotificationGroup>
-    {Item({
-      color: '#ffa500',
-      isRead: false
-    })}
-    {Item({
-      color: 'purple',
-      isRead: true
-    })}
-  </KNotificationGroup>
-  </KNotification>
+const Template = (props) => (
+  <div className="story-container">
+    <h1>Notification</h1>
+    <hr />
+    <div className="story-description">
+      <p>
+      </p>
+    </div>
+    <KNotification {...props}>
+      <KNotificationGroup>
+        {Item({
+          alertColor: '#ffa500',
+          isRead: false
+        })}
+        {Item({
+          alertColor: 'purple',
+          isRead: true
+        })}
+      </KNotificationGroup>
+    </KNotification>
+    <CodeViewer>
+      {`
+  <k-notification>
+    <k-notification-group>
+        <k-notification-item
+          alertColor="#ffa500"
+          label="Course"
+          time="30m ago"
+          isRead="false"
+        >
+          <p>
+            You are been assigned to the
+            course <strong> “The best 
+            Course of the world” </strong>
+          </p>
+        </k-notification-item>
+        <k-notification-item
+          alertColor="purple"
+          label="Course"
+          time="30m ago"
+          isRead="true"
+        >
+          <p>
+            You are been assigned to the
+            course <strong> “The best 
+            Course of the world” </strong>
+          </p>
+        </k-notification-item>
+    </k-notification-group>
+  </k-notification>
+      `}
+    </CodeViewer>
+  </div>
 );
 
 export const Notification = Template.bind({});
+Notification.args = {
+  notificationCount: 2,
+  listStart: 'left' 
+}

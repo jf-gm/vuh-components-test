@@ -1,5 +1,7 @@
 import React from 'react';
 import { KInput } from '../../../component-library-react/src/components';
+import CodeViewer from '../../utils/CodeViewer.jsx';
+import '../../styles/stories.css';
 
 export default {
   title: 'Components/Input',
@@ -7,8 +9,42 @@ export default {
 };
 
 const Template = (props) => (
-  <KInput {...props}>
-  </KInput>
+  <div className="story-container">
+    <h1>Input</h1>
+    <hr />
+    <div className="story-description">
+      <p>
+        From mobile there are only two sizes that 
+        is <strong>large</strong> and <strong>medium</strong>.
+      </p>
+      <p>
+        The high of the inputs increased 8 Px when on mobile.
+      </p>
+      <p>
+        <i>“Label text shouldn’t be truncated. Keep it short,
+        clear, and fully visible. Label text shouldn’t take up 
+        multiple lines”</i>, Material Design.
+      </p>
+    </div>
+    <KInput {...props}>
+    </KInput>
+    <CodeViewer>
+      {`
+  <k-input
+    type="text"
+    label="Firstname"
+    value="Elliot Alderson"
+    disabled="false"
+    validationState=""
+    name="firstname"
+    helperText="Example label"
+    maxLength="0"
+    minLength="0"
+  >
+  </k-input>
+      `}
+    </CodeViewer>
+  </div>
 );
 
 export const Input = Template.bind({});
