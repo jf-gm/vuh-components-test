@@ -6,6 +6,10 @@
     color: #0a0a0a;
 }
 
+.sbdocs.sbdocs-content {
+  margin: 0 auto;
+}
+
 /* - - - - - - COLOR PALETTE - - - - - - */
 .primary {
   background-color: #1B8DF2;
