@@ -6,7 +6,21 @@ import './preview.css';
 
 export default {
   title: 'Components/Buttons',
-  component: 'k-button'
+  component: 'k-button',
+  argTypes: {
+    color: {
+      options: ['primary', 'secondary', 'terciary'],
+      control: { type: 'select' }
+    },
+    size: {
+      options: ['small', 'medium', 'large'],
+      control: { type: 'select' }
+    },
+    shape: {
+      options: ['smooth', 'round', 'full'],
+      control: { type: 'select' }
+    }
+  }
 }
 
 const defArgs = {
@@ -251,6 +265,7 @@ export const Default = TemplateDef.bind({});
 
 export const Primary = TemplateP.bind({});
 Primary.args = { ...defArgs };
+// Primary.parameters = { color: { include: ['foo', 'bar'] } };
 
 export const Secondary = TemplateS.bind({});
 Secondary.args = {
