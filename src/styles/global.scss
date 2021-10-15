@@ -212,6 +212,11 @@
   box-sizing: border-box;
 }
 
+.storybook-preview-wrapper {
+  background-image: radial-gradient(circle at 1px 1px, rgb(213 213 213 / 58%) 1px, transparent 0);
+  background-size: 25px 25px;
+}
+
 .sb-show-main {
   font-family: 'Roboto', sans-serif;
   // background-color: #13171d;
