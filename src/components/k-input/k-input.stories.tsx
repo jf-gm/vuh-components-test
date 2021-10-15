@@ -31,15 +31,15 @@ const Template = (props) => (
     <CodeViewer>
       {`
   <k-input
-    type="text"
-    label="Firstname"
-    value="Elliot Alderson"
-    disabled="false"
-    validationState=""
-    name="firstname"
-    helperText="Example label"
-    maxLength="0"
-    minLength="0"
+    type="${props.type}"
+    label="${props.label}"
+    value="${props.value}"
+    disabled="${props.disabled}"
+    validation-state="${props.validationState}
+    name="${props.name}"
+    helper-text="${props.helperText}"
+    max-length="${props.maxLength}"
+    min-length="${props.minLength}"
   >
   </k-input>
       `}

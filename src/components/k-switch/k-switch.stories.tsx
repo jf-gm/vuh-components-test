@@ -1,5 +1,7 @@
 import React from 'react';
 import { KSwitch } from '../../../component-library-react/src/components';
+import CodeViewer from '../../utils/CodeViewer.jsx';
+import '../../styles/stories.css';
 
 export default {
   title: 'Components/Switch',
@@ -7,7 +9,25 @@ export default {
 };
 
 const Template = (props) => (
-  <KSwitch {...props}/>
+  <div className="story-container">
+    <h1>Checkbox</h1>
+    <hr />
+    <div className="story-description">
+      <p>
+      </p>
+    </div>
+    <KSwitch {...props}/>
+    <CodeViewer>
+      {`
+  <k-switch
+    label="${props.label}"
+    disabled="${props.disabled}"
+    checked="${props.checked}"
+  >
+  </k-switch>
+      `}
+    </CodeViewer>
+  </div>
 );
 
 export const Switch = Template.bind({});

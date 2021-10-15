@@ -99,7 +99,7 @@ const TemplateSmall = (props) => (
     </KAvatar>
     <CodeViewer>
       {`
-  <k-avatar size="small">
+  <k-avatar size="${props.size}">
     <k-img
       src="https://assets.gitlab-static.net/uploads/-/system/user/avatar/3112753/avatar.png?width=90"
       alt="the-ksquare-group"
@@ -120,7 +120,7 @@ const TemplateMedium = (props) => (
     </KAvatar>
     <CodeViewer>
       {`
-  <k-avatar size="medium">
+  <k-avatar size="${props.size}">
     <k-img
       src="https://assets.gitlab-static.net/uploads/-/system/user/avatar/3112753/avatar.png?width=90"
       alt="the-ksquare-group"
@@ -141,7 +141,7 @@ const TemplateLarge = (props) => (
     </KAvatar>
     <CodeViewer>
       {`
-  <k-avatar size="large">
+  <k-avatar size="${props.size}">
     <k-img
       src="https://assets.gitlab-static.net/uploads/-/system/user/avatar/3112753/avatar.png?width=90"
       alt="the-ksquare-group"

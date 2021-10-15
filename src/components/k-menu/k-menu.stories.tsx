@@ -5,6 +5,7 @@ import {
   KImg,
   KNotification,
   KNotificationGroup,
+  KNotificationItem,
   KAvatar,
   KMenuNav,
   KTab,
@@ -28,6 +29,21 @@ const imgProps = {
   src: "https://assets.gitlab-static.net/uploads/-/system/user/avatar/4533028/avatar.png?width=23",
 }
 
+const notificationProps = {
+  label: 'Course',
+  time: '30m ago',
+}
+
+const Item = (props) => (
+  <KNotificationItem {...notificationProps} {...props}>
+    <p style={{color: '#0a0a0a'}}>
+      You are been assigned to the
+      course <strong> “The best 
+      Course of the world” </strong>
+    </p>
+  </KNotificationItem>
+)
+
 const Template = (props) => (
   <>
   <div className="story-container">
@@ -44,8 +60,17 @@ const Template = (props) => (
           <KImg {...imgFigureProps} />
         </figure>
         <div style={{display: 'flex', alignItems: 'center'}}>
-          <KNotification>
-            <KNotificationGroup />
+          <KNotification notificationCount={2}>
+            <KNotificationGroup>
+              {Item({
+                alertColor: '#ffa500',
+                isRead: false
+              })}
+              {Item({
+                alertColor: 'purple',
+                isRead: true
+              })}
+            </KNotificationGroup>
           </KNotification>
         </div>
         <KAvatar>
@@ -71,14 +96,47 @@ const Template = (props) => (
     </KMenu>
     <CodeViewer>
       {`
-  <k-menu menu-key="k-menu">
+  <k-menu menu-key="k-menu"
+    menu-key="${props.menuKey}"
+    hide-drawer-xs="${props.hideDrawerXs}"
+    hide-drawer-sm="${props.hideDrawerSm}"
+    hide-drawer-md="${props.hideDrawerMd}"
+    hide-drawer-lg="${props.hideDrawerLg}"
+    hide-drawer-xl="${props.hideDrawerXl}"
+    disable-drawer="${props.disableDrawer}"
+  >
     <k-menu-content>
       <figure>
         <k.img src="https://www.ksquareinc.com/wp-content/uploads/2019/10/Logo.png" height="32"></k.img>
       </figure>
       <div style="display: flex; align-items: center;">
-        <k-notification notification-count="6">
-          <k-notification-group notification-count="6"></k-notification-group>
+        <k-notification notification-count="2">
+          <k-notification-group>
+            <k-notification-item
+              alert-color="#ffa500"
+              label="Course"
+              time="30m ago"
+              isRead="false"
+            >
+              <p>
+                You are been assigned to the
+                course <strong> “The best 
+                Course of the world” </strong>
+              </p>
+            </k-notification-item>
+            <k-notification-item
+              alert-color="purple"
+              label="Course"
+              time="30m ago"
+              isRead="true"
+            >
+              <p>
+                You are been assigned to the
+                course <strong> “The best 
+                Course of the world” </strong>
+              </p>
+            </k-notification-item>
+          </k-notification-group>
         </k-notification>
       </div>
       <k-avatar style="margin: 16px;">

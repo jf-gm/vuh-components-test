@@ -45,10 +45,13 @@ const Template = (props) => (
     </KNotification>
     <CodeViewer>
       {`
-  <k-notification>
+  <k-notification
+    notification-count="${props.notificationCount}"
+    list-start="${props.listStart}"
+  >
     <k-notification-group>
         <k-notification-item
-          alertColor="#ffa500"
+          alert-color="#ffa500"
           label="Course"
           time="30m ago"
           isRead="false"
@@ -60,7 +63,7 @@ const Template = (props) => (
           </p>
         </k-notification-item>
         <k-notification-item
-          alertColor="purple"
+          alert-color="purple"
           label="Course"
           time="30m ago"
           isRead="true"

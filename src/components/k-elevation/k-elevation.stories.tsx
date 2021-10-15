@@ -21,7 +21,7 @@ const Template = (props) => (
     </KElevation>
     <CodeViewer>
       {`
-  <k-elevation>
+  <k-elevation radius="${props.radius}">
     <div style="
       height: 200px;
       width: 200px;

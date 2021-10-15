@@ -201,7 +201,7 @@ const TemplateP = (props) => (
     </div>
     <CodeViewer>
       {`
-  <k-button color="primary" size="small" shape="smooth">
+  <k-button color="${props.color}" size="${props.size}" shape="${props.shape}">
     Primary
   </k-button>
       `}
@@ -219,7 +219,7 @@ const TemplateS = (props) => (
     </div>
     <CodeViewer>
       {`
-  <k-button color="secondary" size="small" shape="smooth">
+  <k-button color="${props.color}" size="${props.size}" shape="${props.shape}">
     Secondary
   </k-button>
       `}
@@ -237,7 +237,7 @@ const TemplateT = (props) => (
     </div>
     <CodeViewer>
       {`
-  <k-button color="terciary" size="small" shape="smooth">
+  <k-button color="${props.color}" size="${props.size}" shape="${props.shape}">
     Terciary
   </k-button>
       `}

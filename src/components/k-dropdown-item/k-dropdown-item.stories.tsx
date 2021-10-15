@@ -26,10 +26,10 @@ const Template = (props) => (
     <CodeViewer>
       {`
   <k-dropdown-item
-    name="op0"
-    value="00"
-    disabled="false"
-    checked="false"
+    name="${props.name}"
+    value="${props.value}"
+    disabled="${props.disabled}"
+    checked="${props.checked}"
   >
     Option
   </k-dropdown-item>

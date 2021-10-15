@@ -19,7 +19,7 @@ const Template = (props) => (
     </KModal>
     <CodeViewer>
       {`
-  <k-modal show="true" hide-close-button="false">
+  <k-modal show="${props.show}" hide-close-button="${props.hideCloseButton}">
     <p style="margin: 1.5em;">
       Hello world!
     </p>

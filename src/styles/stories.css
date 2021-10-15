@@ -9,6 +9,11 @@
   margin: 0;
 }
 
+.story-container > h2 {
+  margin: 0;
+  color: #0a0a0a;
+}
+
 .story-container > hr {
   border: 0;
   background: linear-gradient(to right, #0000004f 33%, #fff 0%) top/10px 1px repeat-x;

@@ -25,7 +25,7 @@ const Template = (props) => (
     </KCollapseItem>
     <CodeViewer>
       {`
-  <k-collapse-item>
+  <k-collapse-item disabled="${props.disabled}">
     Option
   </k-collapse-item>
       `}

@@ -23,10 +23,10 @@ const Template = (props) => (
     <CodeViewer>
       {`
   <k-img
-    src="https://media-exp1.licdn.com/dms/image/C4E1BAQGOhOLNnmDazw/company-background_10000/0?e=2159024400&v=beta&t=FLPdAgxuIRlNgMSoohrTA6Meg5SzkPIuNV_qauRDP0Q"
-    alt="the-ksquare-group"
-    height="300"
-    fit="cover"
+    src="${props.src}"
+    alt="${props.alt}"
+    height="${props.height}"
+    fit="${props.fit}"
   >
   </k-img>
       `}

@@ -34,7 +34,7 @@ const Template = (props) => (
     <KMenu {...menuArgs}/>
     <CodeViewer>
       {`
-  <k-drawer for-key="k-menu>
+  <k-drawer for-key="${props.forKey}">
   </k-drawer>
   <k-menu menu-key="k-menu">
   </k-menu>

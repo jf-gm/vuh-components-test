@@ -19,7 +19,7 @@ const Template = (props) => (
       <KBreadcrumbsItem >
         Link 2
       </KBreadcrumbsItem>
-      <KBreadcrumbsItem {...props}>
+      <KBreadcrumbsItem current={true}>
         Link 3
       </KBreadcrumbsItem>
     </KBreadcrumbs>
@@ -42,6 +42,3 @@ const Template = (props) => (
 );
 
 export const Breadcrumbs = Template.bind({});
-Breadcrumbs.args = {
-  current: true
-};

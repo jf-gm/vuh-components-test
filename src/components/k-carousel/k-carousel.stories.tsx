@@ -57,7 +57,7 @@ const Template = (props) => (
     </KCarousel>
     <CodeViewer>
       {`
-  <k-carousel style="height: 300px;">
+  <k-carousel style="height: 300px;" show-dots="${props.showDots}">
     <k-carousel-item>
       <k-img
         src="https://cdn.pixabay.com/photo/2019/11/03/01/56/landscape-4597742_1280.jpg"

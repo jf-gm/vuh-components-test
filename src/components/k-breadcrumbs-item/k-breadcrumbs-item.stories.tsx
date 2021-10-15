@@ -25,7 +25,7 @@ const Template = (props) => (
     </KBreadcrumbsItem>
     <CodeViewer>
       {`
-  <k-breadcrumbs-item current="false">
+  <k-breadcrumbs-item current="${props.current}">
     Item
   </k-breadcrumbs-item>
       `}

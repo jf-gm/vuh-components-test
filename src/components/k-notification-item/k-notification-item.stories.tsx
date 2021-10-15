@@ -38,10 +38,10 @@ const Template = (props) => (
     <CodeViewer>
       {`
   <k-notification-item
-    alertColor="#ffa500"
-    label="Course"
-    time="30m ago"
-    isRead="false"
+    alert-color="${props.alertColor}"
+    label="${props.label}"
+    time="${props.time}"
+    isRead="${props.isRead}"
   >
     <p>
       You are been assigned to the

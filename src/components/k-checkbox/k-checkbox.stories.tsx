@@ -9,16 +9,20 @@ export default {
   component: 'k-checkbox'
 }
 
-const Template = () => (
+const Template = (props) => (
   <div className="story-container">
     <h1>Checkbox</h1>
     <hr />
-    <KCheckbox>
+    <KCheckbox {...props}>
       Option
     </KCheckbox>
     <CodeViewer>
       {`
-  <k-checkbox>
+  <k-checkbox
+    disabled="${props.disabled}"
+    checked="${props.checked}"
+    value="${props.value}"
+  >
     Option
   </k-checkbox>
       `}
@@ -27,4 +31,9 @@ const Template = () => (
 );
 
 export const Checkbox = Template.bind({});
+Checkbox.args = {
+  disabled: false,
+  checked: false,
+  value: "1"
+}
 

@@ -23,7 +23,7 @@ const Template = (props) => (
     </KIcon>
     <CodeViewer>
       {`
-  <k-icon size="small" name="alert-circle">
+  <k-icon size="${props.size}" name="${props.name}">
   </k-icon>
       `}
     </CodeViewer>

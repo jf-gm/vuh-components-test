@@ -28,7 +28,14 @@ const Template = (props) => (
     </KDropdown>
     <CodeViewer>
       {`
-  <k-dropdown>
+  <k-dropdown
+    disabled="${props.disabled}"
+    variant="${props.variant}"
+    color="${props.color}"
+    validation-state="${props.validationState}"
+    label="${props.label}"
+    helper-text="${props.helperText}"
+  >
     <k-dropdown-item name="op0" value="00">Select your option</k-dropdown-item>
     <k-dropdown-item name="op1" value="01">Option 1</k-dropdown-item>
     <k-dropdown-item name="op2" value="02">Option 2</k-dropdown-item>
