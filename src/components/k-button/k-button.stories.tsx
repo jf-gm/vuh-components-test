@@ -265,7 +265,6 @@ export const Default = TemplateDef.bind({});
 
 export const Primary = TemplateP.bind({});
 Primary.args = { ...defArgs };
-// Primary.parameters = { color: { include: ['foo', 'bar'] } };
 
 export const Secondary = TemplateS.bind({});
 Secondary.args = {
