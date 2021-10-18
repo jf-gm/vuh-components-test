@@ -5,7 +5,7 @@ import '../../styles/stories.css';
 
 export default {
   title: 'Components/Dropdown',
-  component: 'k-dropdown'
+  component: 'k-dropdown',
 };
 
 const Template = (props) => (
@@ -54,4 +54,18 @@ Dropdown.args = {
   validationState: '',
   label: '',
   helperText: 'Example label'
+};
+Dropdown.argTypes = {
+  variant: {
+    options: ['button', 'input', 'table'],
+    control: { type: 'select' }
+  },
+  color: {
+    options: ['primary', 'secondary', 'terciary'],
+    control: { type: 'select' }
+  },
+  validationState: {
+    options: ['', 'success', 'error'],
+    control: { type: 'select' }
+  },
 };

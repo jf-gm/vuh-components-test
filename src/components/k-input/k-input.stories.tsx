@@ -5,7 +5,17 @@ import '../../styles/stories.css';
 
 export default {
   title: 'Components/Input',
-  component: 'k-input'
+  component: 'k-input',
+  argTypes: {
+    type: {
+      options: ['text', 'password', 'email', 'tel', 'url', 'number'],
+      control: { type: 'select' }
+    },
+    validationState: {
+      options: ['', 'success', 'error'],
+      control: { type: 'select' }
+    },
+  }
 };
 
 const Template = (props) => (

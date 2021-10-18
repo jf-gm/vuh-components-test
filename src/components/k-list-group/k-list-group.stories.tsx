@@ -5,7 +5,10 @@ import '../../styles/stories.css';
 
 export default {
   title: 'Components/List',
-  component: 'k-list-group'
+  component: 'k-list-group',
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  }
 };
 
 const Template = () => (

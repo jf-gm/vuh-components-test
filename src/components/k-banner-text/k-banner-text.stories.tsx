@@ -35,3 +35,6 @@ const Template = () => (
 
 
 export const BannerText = Template.bind({});
+BannerText.parameters = {
+  controls: { hideNoControlsWarning: true },
+};

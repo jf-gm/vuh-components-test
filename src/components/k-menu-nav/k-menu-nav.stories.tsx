@@ -34,3 +34,6 @@ const Template = () => (
 );
 
 export const MenuNav = Template.bind({});
+MenuNav.parameters = {
+  controls: { hideNoControlsWarning: true },
+};

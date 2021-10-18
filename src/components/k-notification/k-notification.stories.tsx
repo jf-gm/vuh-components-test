@@ -5,7 +5,10 @@ import '../../styles/stories.css';
 
 export default {
   title: 'Components/Notification',
-  component: 'k-notification'
+  component: 'k-notification',
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  }
 };
 
 const notificationProps = {
@@ -85,4 +88,10 @@ export const Notification = Template.bind({});
 Notification.args = {
   notificationCount: 2,
   listStart: 'left' 
+};
+Notification.argTypes = {
+  listStart: {
+    options: ['left', 'right'],
+    control: { type: 'select' }
+  }
 }

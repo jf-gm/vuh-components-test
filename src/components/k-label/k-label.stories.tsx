@@ -5,7 +5,10 @@ import '../../styles/stories.css';
 
 export default {
   title: 'Components/Label',
-  component: 'k-label'
+  component: 'k-label',
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  }
 };
 
 const Template = () => (

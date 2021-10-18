@@ -5,7 +5,10 @@ import '../../styles/stories.css';
 
 export default {
   title: 'Components/Dialog',
-  component: 'k-dialog-header'
+  component: 'k-dialog-header',
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  }
 };
 
 const Template = () => (

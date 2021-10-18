@@ -5,7 +5,10 @@ import '../../styles/stories.css';
 
 export default {
   title: 'Components/Tab',
-  component: 'k-tab'
+  component: 'k-tab',
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  }
 };
 
 const Template = () => (

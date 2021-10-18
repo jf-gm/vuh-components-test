@@ -5,7 +5,13 @@ import '../../styles/stories.css';
 
 export default {
   title: 'Components/Search Bar',
-  component: 'k-search-bar'
+  component: 'k-search-bar',
+  argTypes: {
+    type: {
+      options: ['solid', 'outlined'],
+      control: { type: 'select' }
+    }
+  }
 };
 
 const Template = (props) => (

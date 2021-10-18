@@ -39,3 +39,9 @@ export const TableRow = Template.bind({});
 TableRow.args = {
   type: 'default',
 };
+TableRow.argTypes = {
+  type: {
+    options: ['default', 'header', 'navbar'],
+    control: { type: 'select' }
+  }
+};

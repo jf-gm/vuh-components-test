@@ -6,7 +6,10 @@ import '../../styles/stories.css';
 
 export default {
   title: 'Components/Card',
-  component: 'k-card'
+  component: 'k-card',
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  }
 }
 
 const imgProps: imgInterface = {

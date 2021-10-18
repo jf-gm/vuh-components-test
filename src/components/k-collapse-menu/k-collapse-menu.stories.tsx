@@ -5,7 +5,10 @@ import '../../styles/stories.css';
 
 export default {
   title: 'Components/Collapsable',
-  component: 'k-collapse-menu'
+  component: 'k-collapse-menu',
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  }
 }
 
 const Template = () => (

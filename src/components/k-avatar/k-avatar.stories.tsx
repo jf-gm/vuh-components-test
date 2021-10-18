@@ -10,10 +10,7 @@ export default {
   component: 'k-avatar',
   argDefaults: {
     size: 'small'
-  },
-  argOptions: {
-    size: ['small', 'medium', 'large'],
-  },
+  }
 }
 
 const defImgProps: imgInterface = {
@@ -154,18 +151,39 @@ const TemplateLarge = (props) => (
 </div>)
 
 export const All = TemplateAll.bind({});
+All.parameters = {
+  controls: { hideNoControlsWarning: true },
+};
 
 export const Small = TemplateSmall.bind({});
 Small.args = {
   size: 'small'
 };
+Small.argTypes = {
+  size: {
+    options: ['small', 'medium', 'large'],
+    control: { type: 'select' }
+  },
+}
 
 export const Medium = TemplateMedium.bind({});
 Medium.args = {
   size: 'medium'
 };
+Medium.argTypes = {
+  size: {
+    options: ['small', 'medium', 'large'],
+    control: { type: 'select' }
+  },
+}
 
 export const Large = TemplateLarge.bind({});
 Large.args = {
   size: 'large'
 };
+Large.argTypes = {
+  size: {
+    options: ['small', 'medium', 'large'],
+    control: { type: 'select' }
+  },
+}

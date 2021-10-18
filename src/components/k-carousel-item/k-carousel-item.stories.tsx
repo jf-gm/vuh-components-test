@@ -13,7 +13,10 @@ const imgProps: imgInterface = {
 
 export default {
   title: 'Components/Carousel',
-  component: 'k-carousel-item'
+  component: 'k-carousel-item',
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  }
 }
 
 const Template = () => (

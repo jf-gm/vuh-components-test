@@ -5,7 +5,10 @@ import '../../styles/stories.css';
 
 export default {
   title: 'Components/Divider',
-  component: 'k-divider'
+  component: 'k-divider',
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  }
 };
 
 const Template = () => (

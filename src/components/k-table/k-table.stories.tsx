@@ -14,7 +14,10 @@ import '../../styles/stories.css';
 
 export default {
   title: 'Components/Table',
-  component: 'k-table'
+  component: 'k-table',
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  }
 };
 
 const Template = () => (

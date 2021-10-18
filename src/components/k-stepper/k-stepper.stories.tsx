@@ -6,7 +6,10 @@ import './preview.css';
 
 export default {
   title: 'Components/Stepper',
-  component: 'k-stepper'
+  component: 'k-stepper',
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  }
 };
 
 const Template = () => (

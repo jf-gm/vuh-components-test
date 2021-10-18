@@ -6,12 +6,18 @@ import '../../styles/stories.css';
 export default {
   title: 'Components/Image',
   component: 'k-img',
+  argTypes: {
+    fit: {
+      options: ['fill', 'contain', 'cover', 'none', 'scale-down'],
+      control: { type: 'select' }
+    },
+  }
 };
 
 const defaultArgs = {
   src: 'https://media-exp1.licdn.com/dms/image/C4E1BAQGOhOLNnmDazw/company-background_10000/0?e=2159024400&v=beta&t=FLPdAgxuIRlNgMSoohrTA6Meg5SzkPIuNV_qauRDP0Q',
   alt: 'the-ksquare-group',
-  height: '300',
+  height: 300,
   fit: 'cover'
 };
 

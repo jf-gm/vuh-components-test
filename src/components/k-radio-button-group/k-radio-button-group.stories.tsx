@@ -6,7 +6,10 @@ import './preview.css';
 
 export default {
   title: 'Components/RadioButton',
-  component: 'k-radio-button-group'
+  component: 'k-radio-button-group',
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  }
 };
 
 const radioProps = {

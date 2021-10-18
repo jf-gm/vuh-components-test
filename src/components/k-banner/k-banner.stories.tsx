@@ -67,3 +67,9 @@ const Template = (props) => (
 
 export const Banner = Template.bind({});
 Banner.args = {...defArgs};
+Banner.argTypes = {
+  type: {
+    options: ['success', 'error'],
+    control: { type: 'select' }
+  },
+}

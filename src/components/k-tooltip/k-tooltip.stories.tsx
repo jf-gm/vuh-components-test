@@ -5,7 +5,13 @@ import '../../styles/stories.css';
 
 export default {
   title: 'Components/Tooltip',
-  component: 'k-tooltip'
+  component: 'k-tooltip',
+  argTypes: {
+    position: {
+      options: ['top', 'left', 'right', 'bottom'],
+      control: { type: 'select' }
+    }
+  }
 };
 
 const Template = (props) => (
@@ -32,9 +38,11 @@ const Template = (props) => (
         </li>
       </ul>
     </div>
-    <KTooltip {...props}>
-      Hover me!
-    </KTooltip>
+    <div className="tooltip-c" style={{display: 'flex'}}>
+      <KTooltip {...props}>
+        Hover me!
+      </KTooltip>
+    </div>
     <CodeViewer>
       {`
   <k-tooltip

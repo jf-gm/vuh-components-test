@@ -5,7 +5,10 @@ import '../../styles/stories.css';
 
 export default {
   title: 'Components/Breadcrumbs',
-  component: 'k-breadcrumbs'
+  component: 'k-breadcrumbs',
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  }
 };
 
 const Template = (props) => (

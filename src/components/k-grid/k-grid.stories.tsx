@@ -6,7 +6,10 @@ import './preview.css';
 
 export default {
   title: 'Components/Grid',
-  component: 'k-grid'
+  component: 'k-grid',
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  }
 };
 
 const Template = (props) => (

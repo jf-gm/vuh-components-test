@@ -7,19 +7,8 @@ import './preview.css';
 export default {
   title: 'Components/Buttons',
   component: 'k-button',
-  argTypes: {
-    color: {
-      options: ['primary', 'secondary', 'terciary'],
-      control: { type: 'select' }
-    },
-    size: {
-      options: ['small', 'medium', 'large'],
-      control: { type: 'select' }
-    },
-    shape: {
-      options: ['smooth', 'round', 'full'],
-      control: { type: 'select' }
-    }
+  parameters: {
+    controls: { hideNoControlsWarning: true },
   }
 }
 
@@ -27,6 +16,21 @@ const defArgs = {
   color: 'primary',
   size: 'small',
   shape: 'smooth'
+}
+
+const argTypes = {
+  color: {
+    options: ['primary', 'secondary', 'terciary'],
+    control: { type: 'select' }
+  },
+  size: {
+    options: ['small', 'medium', 'large'],
+    control: { type: 'select' }
+  },
+  shape: {
+    options: ['smooth', 'round', 'full'],
+    control: { type: 'select' }
+  }
 }
 
 interface tableProps {
@@ -265,15 +269,18 @@ export const Default = TemplateDef.bind({});
 
 export const Primary = TemplateP.bind({});
 Primary.args = { ...defArgs };
+Primary.argTypes = { ...argTypes };
 
 export const Secondary = TemplateS.bind({});
 Secondary.args = {
   ...defArgs,
   color: 'secondary'
 };
+Secondary.argTypes = { ...argTypes };
 
 export const Terciary = TemplateT.bind({});
 Terciary.args = {
   ...defArgs,
   color: 'terciary',
 };
+Terciary.argTypes = { ...argTypes };

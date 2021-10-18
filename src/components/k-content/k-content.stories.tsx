@@ -3,7 +3,10 @@ import { KContent, KButton } from '../../../component-library-react/src/componen
 
 export default {
   title: 'Components/Content',
-  component: 'k-content'
+  component: 'k-content',
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  }
 };
 
 const Template = () => (
