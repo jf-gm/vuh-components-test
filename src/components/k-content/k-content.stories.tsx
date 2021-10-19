@@ -20,4 +20,4 @@ const Template = () => (
   </KContent>
 );
 
-export const Content = Template.bind({});
+// export const Content = Template.bind({});
