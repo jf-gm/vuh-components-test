@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { h } from '@stencil/core';
+import Prism from 'prismjs';
 
 const textOptions = {
   show: 'Show Code',
@@ -17,6 +18,9 @@ const componentName = ({children}) => {
       setTextOption(1);
     }
   }
+
+  const html = Prism.highlight(children, Prism.languages.html, 'html');
+
   return (
     <div className="code-container">
       <button onClick={codeButtonHanlder}>
@@ -24,7 +28,7 @@ const componentName = ({children}) => {
       </button>
       <pre className={textOption === -1 ? '' : (textOption ? 'hide' : 'show')}>
       <code>
-        {children}
+        <div dangerouslySetInnerHTML={{ __html: html }} />
       </code>
       </pre>
     </div>
