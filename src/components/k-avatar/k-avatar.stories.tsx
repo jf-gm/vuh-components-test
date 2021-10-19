@@ -175,7 +175,7 @@ Medium.argTypes = {
     options: ['small', 'medium', 'large'],
     control: { type: 'select' }
   },
-}
+};
 
 export const Large = TemplateLarge.bind({});
 Large.args = {
@@ -186,4 +186,4 @@ Large.argTypes = {
     options: ['small', 'medium', 'large'],
     control: { type: 'select' }
   },
-}
+};
